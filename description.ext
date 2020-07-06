@@ -1,0 +1,59 @@
+// CONFIGS BÁSICAS
+// Cleanup
+corpseManagerMode 			= 1;							// 1= ativa a limpeza de otimização de performance. 0= desativa.
+	corpseLimit 			= 5;							// quant. máxima de mortos/destruíção pelo cenário. Excedendo o limite, o servidor remove o excesso mais antigo (afeta performance). 
+	corpseRemovalMinTime 	= 600;							// tempo mínimo (em segundos, 600=10min) que o server levará para deletar o excesso de corpos mortos e veículos destruídos.
+	corpseRemovalMaxTime 	= 600;  						// tempo máximo que o server levará para deletar o excesso de corpos mortos e veículos destruídos.
+	
+// Áreas de ReSpawn
+respawnButton 				= 0;							// para ativar os respawns em uma missão, troque 0 por 1.
+
+// Dados da Missão
+overviewPicture 			= "images\mission-thumb.jpg";	// thumb da missão;
+onLoadName 					= "PARA NOVOS EDITORES";			// nome da missão;
+author 						= "thy";							// nome/nick do editor;
+onLoadMission 				= "Este framework contém diversos exemplos para acelerar o aprendizado de novos editores. Sem nós, editores, o Arma não passa de um parquinho sem crianças brincando.";
+
+// CBA MOD
+cba_settings_hasSettingsFile = 0;
+
+// T8AI
+#include <T8\CONFIG.hpp>
+class cfgFunctions
+{
+	#include <T8\FUNCTIONS.hpp>
+};
+
+// SONS CUSTOMIZADOS 
+class CfgRadio {
+	sounds[]={};
+
+	class gritoSuicida {
+		name = "gritoSuicida";
+		sound[] = {"sounds\gritoSuicida.ogg", db+3, 1.0};
+		title = "";
+	};
+	
+	class exemploAudio1
+	{
+		name = "exemploAudio1";
+		sound[] = {"sounds\exemploAudio1.ogg", db+3, 1.0};
+		title = "";
+	};
+	
+	class exemploAudio2
+	{
+		name = "exemploAudio2";
+		sound[] = {"sounds\exemploAudio2.ogg", db+3, 1.0};
+		title = "";
+	};
+};
+
+
+
+
+
+
+
+
+
