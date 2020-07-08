@@ -59,21 +59,22 @@ class cfgT8Units
 {
 	// ------------------------------------------------------------------------------
 	// DEBUG Settings
+	// Após todos os testes que você quiser fazer com a T8, é fundamental você mudar estas 4 configs abaixo para FALSE para a T8 não ficar sendo mostrada no mapa dos admins logados no server durante a partida. Mais lá embaixo (até a linha 169) há configurações importantes também. Vai rolando e se ligando nos comentários.
 
 	class debug
 	{
 		// general debug switch
-		enable				= false;
+		enable				= true;
 
 		// show debug Hints
-		allow_hints			= false;
+		allow_hints			= true;
 
 		// create debug markers
-		allow_marker		= false;
+		allow_marker		= true;
 
 		// send debug messages to Killzone Kids console instead of RPT file
 		// http://killzonekid.com/arma-console-extension-debug_console-dll-v3-0/
-		allow_console		= false;	
+		allow_console		= true;	
 	};
 
 
@@ -96,7 +97,7 @@ class cfgT8Units
 		//					__WEST = 2
 		//					__RESI = 3
 		//					__CIVI = 4
-		enemySide			= __EAST;
+		enemySide			= 1;
 		
 		// selected modset for unit group compilation
 		// see:		- class groupCompilations
