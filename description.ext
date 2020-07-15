@@ -1,27 +1,41 @@
 // CONFIGS BÁSICAS
-// Cleanup
-corpseManagerMode 			= 1;							// 1= ativa a limpeza de otimização de performance. 0= desativa.
-	corpseLimit 			= 5;							// quant. máxima de mortos/destruíção pelo cenário. Excedendo o limite, o servidor remove o excesso mais antigo (afeta performance). 
-	corpseRemovalMinTime 	= 600;							// tempo mínimo (em segundos, 600=10min) que o server levará para deletar o excesso de corpos mortos e veículos destruídos.
-	corpseRemovalMaxTime 	= 600;  						// tempo máximo que o server levará para deletar o excesso de corpos mortos e veículos destruídos.
-	
-// Áreas de ReSpawn
-respawnButton 				= 0;							// para ativar os respawns em uma missão, troque 0 por 1.
-
-// Dados da Missão
-overviewPicture 			= "images\mission-thumb.jpg";	// thumb da missão;
-onLoadName 					= "PARA NOVOS EDITORES";			// nome da missão;
-author 						= "thy";							// nome/nick do editor;
-onLoadMission 				= "Este framework contém diversos exemplos para acelerar o aprendizado de novos editores. Sem nós, editores, o Arma não passa de um parquinho sem crianças brincando.";
+class Header {
+	gameType 					= Sandbox; 	// Coop / DM / CTF / LastMan / Warlords / RPG / SC / KOTH
+		minPlayers				= 1;		// mínimo de jogadores na missão.
+		maxPlayers				= 1;		// máximo de jogadores na missão.
+		respawnOnStart			= 0;		// 1 = para vc nascer em um dos pontos de rewspawn caso você tenha um / 0 = vc nascerá onde está seu soldado no mapa.
+		respawnButton 			= 0;		// 0 = desativar respawns na missão / 1 = ativa.
+		debriefing 				= 1;		// 0 = não / 1 = sim 
+		enableTeamSwitch 		= 0;		// 0 = não permitido trocar de time / 1 = permitido.
+		joinUnassigned 			= 0; 		// 0 = força novos jogadores a auto-assinar um slot no lado com menos jogadores (PvP).
+		saving 					= 0;		// 0 = não permitido salvar uma partida / 1 = permitido.
+	corpseManagerMode 			= 1;		// 0 = desativa o gerenciamento inteligente dos corpos mortos na partida.
+		corpseLimit 			= 20;		// quantidade limite de corpos mortos simultâneos na partida.
+		corpseRemovalMinTime	= 600; 		// tempo mínimo (em segundos, 600=10min) que o server levará para deletar os corpos mortos.
+		corpseRemovalMaxTime 	= 600;		// tempo máximo que o server levará para deletar os corpos mortos.
+	wreckManagerMode 			= 1; 		// 1= ativa a limpeza de otimização de performance / 0= desativa.
+		wreckLimit 				= 10;		// quantidade limite de veículos destruídos simultâneos na partida.
+		wreckRemovalMinTime 	= 1800; 	// tempo mínimo que o server levará para deletar os veículos destruídos.
+		wreckRemovalMaxTime 	= 1800;		// tempo máximo que o server levará para deletar os veículos destruídos.
+	onLoadName 					= "PARA NOVOS EDITORES"; 		// nome da sua missão
+		author 					= "thy"; 						// nome/nick do editor;
+		overviewPicture 		= "images\mission-thumb.jpg"; 	// thumbnail da missão na tela de loading.
+		onLoadMission 			= "Este framework contém diversos exemplos para acelerar o aprendizado de novos editores. Sem nós, editores, o Arma não passa de um parquinho sem crianças brincando."; // descrição da sua missão na tela de loading.
+};
 
 // CBA MOD
 cba_settings_hasSettingsFile = 0;
 
-// T8AI
+// T8AI (LINHA 1/2)
 #include <T8\CONFIG.hpp>
-class cfgFunctions
-{
+
+class cfgFunctions {
+
+	// T8AI (LINHA 2/2)
 	#include <T8\FUNCTIONS.hpp>
+
+	// SISTEMA RESPAWN DE VEÍCULOS
+	#include "vehiclesRespawn\CfgFunctions.hpp"
 };
 
 // SONS CUSTOMIZADOS 
@@ -48,12 +62,3 @@ class CfgRadio {
 		title = "";
 	};
 };
-
-
-
-
-
-
-
-
-
