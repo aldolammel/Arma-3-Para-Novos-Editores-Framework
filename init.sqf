@@ -1,4 +1,4 @@
-// TO DEDICATED AND HEADLESS CLIENT AND REGULAR CLIENT
+// PARA SERVIDORES DEDICADOS E CLIENTES COMUNS E CLIENTES HEADLESS
 if (!isDedicated) then { 
 	waitUntil { 
 		!isNull player
@@ -6,7 +6,7 @@ if (!isDedicated) then {
 	[] call compile preProcessFileLineNumbers "briefing.sqf";
 };
 
-// ONLY FOR CLIENT
+// APENAS PARA CLIENTES 
 if(hasInterface) then {
     [] spawn {
         waitUntil {
@@ -15,10 +15,10 @@ if(hasInterface) then {
     };
 };
 
-// CUSTOM SOUNDS
+// SONS CUSTOMIZADOS
 //null = [radinho, 0, [["sounds\musiquinha.ogg", 61],["sounds\musiquinha.ogg", 61]]] execVM "radio.sqf";
 
-// T8 SPAWN ZONES
+// T8 ZONAS ONDE A AI IRÁ SPAWNAR
 "zona01" setmarkeralpha 0;
 "zona02" setmarkeralpha 0;
 "zona03" setmarkeralpha 0;
@@ -26,14 +26,17 @@ if(hasInterface) then {
 
 execVM "T8_missionEXEC.sqf";
 
-// MARKERS ON MAP > GAMEPLAY
+// MARCAS NO MAPA > GAMEPLAY
 "marker-exemplo" setmarkeralpha 0;
+"marker-spawn01" setmarkeralpha 0;	// exemplo do spawn randomico
+"marker-spawn02" setmarkeralpha 0;	// exemplo do spawn randomico
+"marker-spawn03" setmarkeralpha 0;	// exemplo do spawn randomico
 
 
-// MARKERS ON MAP > DASHBOARD FOR EDITOR ONLY
+// MARCAS NO MAPA > PARA O EDITOR APENAS
 "dashboard-sucesso" setmarkeralpha 0;
 "dashboard-neutro" setmarkeralpha 0;
 "dashboard-fracasso" setmarkeralpha 0;
 
-// CHECK DEATH OF CIVILS
-null=[] execVM "civCount.sqf";
+// CONVENSÂO DE GENEBRA
+null=[] execVM "genevaConvention.sqf";

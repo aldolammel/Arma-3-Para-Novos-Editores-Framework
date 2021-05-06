@@ -18,7 +18,7 @@ while { true } do {
 			(vehicle player) setDamage 1;
 		}
 		else {
-			hintSilent format["Você será dado como desertor em:\n\n%1s", DTIME - _t];
+			hintSilent format["Você será dado como desertor em\n\n%1s", DTIME - _t];
 		};
 	};
  sleep 0.1;
