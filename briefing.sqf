@@ -12,6 +12,8 @@ player createDiaryRecord ["Diary",
 player createDiaryRecord ["Diary", 
 	["Inteligência","
 	xxxxxxxxxxxx.
+	<br/><br/>
+	<img image='images\thumb.jpg' width='1024' height='512'/>
 	"]];
 
 player createDiaryRecord ["Diary", 

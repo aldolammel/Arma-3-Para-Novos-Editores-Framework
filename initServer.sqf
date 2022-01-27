@@ -3,6 +3,9 @@
 // INTRO
 //"missionIntro.sqf" remoteExec ["BIS_fnc_execVM"];
 
+// PLAYER FACES
+[playerIdNameFace, "AfricanHead_02"] remoteExec ["setFace", 0, playerIdNameFace];
+
 // ANIMATIONS
 // All soldiers animations are here for turn around the server sync issue.
 
