@@ -1,10 +1,30 @@
 // Serverside scripts, funcs, etc
 
-// INTRO
-//"missionIntro.sqf" remoteExec ["BIS_fnc_execVM"];
+// T8 ZONAS ONDE A AI IRÁ SPAWNAR
+"zona01" setmarkeralpha 0;
+"zona02" setmarkeralpha 0;
+"zona03" setmarkeralpha 0;
+"zona04" setmarkeralpha 0;
 
-// PLAYER FACES
-[playerIdNameFace, "AfricanHead_02"] remoteExec ["setFace", 0, playerIdNameFace];
+execVM "T8_missionEXEC.sqf";
+
+// MARCAS NO MAPA > GAMEPLAY > PÚBLICAS PARA TODOS
+"PUB-markerVersion" setmarkeralpha 100;
+"PUB-marker01" setmarkeralpha 100;
+"PUB-marker02" setmarkeralpha 100;
+
+"PUB-marker03" setmarkeralpha 0;
+
+// MARCAS NO MAPA > GAMEPLAY > PRIVADAS POR FACÇÃO
+// Estão no arquivo initPlayerLocal.sqf
+
+// MARCAS NO MAPA > EDITOR > PRIVADAS DO EDITOR
+"dashboard-sucesso" setmarkeralpha 0;
+"dashboard-neutro" setmarkeralpha 0;
+"dashboard-fracasso" setmarkeralpha 0;
+
+// CONVENSÂO DE GENEBRA
+null=[] execVM "genevaConvention.sqf";
 
 // ANIMATIONS
 // All soldiers animations are here for turn around the server sync issue.
@@ -30,3 +50,4 @@
 	{[soldadoAnimado05,"KNEEL","FULL",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
 	{[soldadoAnimado06,"LEAN","FULL",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
 	{[soldadoAnimado07,"SIT_LOW","FULL",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
+	

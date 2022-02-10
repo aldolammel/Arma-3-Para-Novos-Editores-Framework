@@ -1,27 +1,45 @@
 //Lembre-se de que o ARMA só lê este arquivo INIT na máquina do jogador, ou seja, o que estiver declarado aqui nunca será processado pelo Servidor Dedicado da partida. Em outras palavras, não adicionar "isDedicated" (é servidor dedicado) ou !isDedicated (não é servidor dedicado) neste arquivo init.
 
+// INTRO
+//"missionIntro.sqf" remoteExec ["BIS_fnc_execVM"];
+
+// PLAYER FACES
+[playerIdNameFace, "AfricanHead_02"] remoteExec ["setFace", 0, playerIdNameFace];
+
+// SONS CUSTOMIZADOS
+null = [radinho, 0, [["sounds\musiquinha.ogg", 61],["sounds\musiquinha.ogg", 61]]] execVM "radio.sqf";
+
 // MARCAS NO MAPA > CONTROLE DE VISIBILIDADE
 // Prefixos pra markers no Editor: WEST-, EAST-, GUER-, CIV-
-[] spawn {
-    while { true } do {
-        waitUntil { sleep 1; alive player};
+[] spawn
+{
+    while { true } do
+	{
+		waitUntil
+		{ 
+			sleep 1;
+			alive player
+		};
         {
             _arr = _x splitString "-";
             _pre = _arr select 0;
-            if (_pre in ["WEST","EAST","GUER","CIV"]) then {
-                if (format["%1",side player] == _pre) then {
-                    _x setMarkerAlphaLocal 1;
-                } else {
+			
+            if (_pre in ["WEST","EAST","GUER","CIV"]) then
+			{
+				if (format["%1",side player] == _pre) then
+				{
+					_x setMarkerAlphaLocal 1;
+                } else 
+				{
                     _x setMarkerAlphaLocal 0;
                 };
             };
-            
         } count allMapMarkers;
     };
 };
 
 // MARCAS NO MAPA > GAMEPLAY > PÚBLICAS PARA TODOS
-// Estão no arquivo init.sqf
+// Estão no arquivo initServer.sqf
 
 // MARCAS NO MAPA > GAMEPLAY > PRIVADAS POR FACÇÃO
 	// Para players BluFor
