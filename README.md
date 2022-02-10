@@ -64,9 +64,13 @@ Aqui você encontrará:
 dentre muitas outras coisas ainda não listadas acima...
 
 ## Changelog
+
 2020-12-28:
+
 - Adicionado novos exemplos, principalmente os relacionados a probabilidade de objetos e unidades spawnarem a cada vez que uma missão é rodada.
+
 2020-07-15:
+
 - Removendo dinamicamente vegetação, construções ou qualquer outra nativa de um mapa;
 - Player iniciando a partida já com a Night Vision ligada;
 - Veículos - Como forçar a assinatura de calor de veículos;
@@ -75,6 +79,8 @@ dentre muitas outras coisas ainda não listadas acima...
 - Veículos - Detectando qualquer um (player ou bot) com um veículo específico sobre a trigger;
 - T8 Spawn system - ajuste na configuração da AI;
 - T8 Spawn system - habilidade do T8 em prover supressão preconfigurado com as classes de todos os Machine Gunners e Autoriflemen do Arma 3 e suas DLC's + RHS.
+
 2020-06-29:
+
 - Tirei a binarização para ficar mais fácil para você copiar tudo o que quiser;
 - Adicionado exemplos de como validar grupos.
