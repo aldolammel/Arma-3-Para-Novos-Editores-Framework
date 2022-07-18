@@ -42,12 +42,12 @@ class Header {
 cba_settings_hasSettingsFile = 0;
 
 // T8AI (LINHA 1/2)
-#include <T8\CONFIG.hpp>
+#include "T8\CONFIG.hpp"
 
 class cfgFunctions {
 
 	// T8AI (LINHA 2/2)
-	#include <T8\FUNCTIONS.hpp>
+	#include "T8\FUNCTIONS.hpp"
 
 	// SISTEMA RESPAWN DE VEÍCULOS
 	#include "vehiclesRespawn\CfgFunctions.hpp"
