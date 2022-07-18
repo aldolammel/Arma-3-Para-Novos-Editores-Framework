@@ -1,16 +1,14 @@
-//Lembre-se de que o ARMA só lê este arquivo INIT na máquina do jogador, ou seja, o que estiver declarado aqui nunca será processado pelo Servidor Dedicado da partida. Em outras palavras, não adicionar "isDedicated" (é servidor dedicado) ou !isDedicated (não é servidor dedicado) neste arquivo init.
+// Nativamente o initPlayerLocal.sqf é executado somente pelo jogador (seja um player comum ou o player que está hosteando a partida quando não se há um servidor dedicado fazendo a função). Sua ordem de execução NÃO é garantida, podendo ser iniciado somente após a execução do initServer.sqf por exemplo, mas sem dúvida somente depois da execução do init.sqf que é sempre o primeiro init a ser rodado.
 
-// INTRO
-//"missionIntro.sqf" remoteExec ["BIS_fnc_execVM"];
+// Nunca, neste arquivo, faça validações como " if (isServer)" ou " if (hasInterface)". Não há essa necessidade porque este arquivo é SOMENTE lido por players.
 
 // PLAYER FACES
 [playerIdNameFace, "AfricanHead_02"] remoteExec ["setFace", 0, playerIdNameFace];
 
-// SONS CUSTOMIZADOS
-null = [radinho, 0, [["sounds\musiquinha.ogg", 61],["sounds\musiquinha.ogg", 61]]] execVM "radio.sqf";
-
 // MARCAS NO MAPA > CONTROLE DE VISIBILIDADE
-// Prefixos pra markers no Editor: WEST-, EAST-, GUER-, CIV-
+// ao criar markers no Eden, utilize os prefixos para garantir que somente aquela facção verá as marcas: WEST-, EAST-, GUER-, CIV-
+// por enquanto só funciona com markers que já estão disponíveis no início da missão. Se as marcas das facções precisarem
+// aparecer durando a partida, trate-as como públicas infelizmente até eu adaptar o script abaixo.
 [] spawn
 {
     while { true } do
@@ -18,7 +16,7 @@ null = [radinho, 0, [["sounds\musiquinha.ogg", 61],["sounds\musiquinha.ogg", 61]
 		waitUntil
 		{ 
 			sleep 1;
-			alive player
+			alive player;
 		};
         {
             _arr = _x splitString "-";
@@ -38,31 +36,24 @@ null = [radinho, 0, [["sounds\musiquinha.ogg", 61],["sounds\musiquinha.ogg", 61]
     };
 };
 
+// MARCAS NO MAPA > T8 ZONAS DE SPAWN
+// estão no init.sqf.
+
 // MARCAS NO MAPA > GAMEPLAY > PÚBLICAS PARA TODOS
-// Estão no arquivo initServer.sqf
+"PUB-marker01" setMarkerAlpha 100;
+"PUB-marker02" setMarkerAlpha 100;
+"PUB-markerVersion" setMarkerAlpha 100;
 
 // MARCAS NO MAPA > GAMEPLAY > PRIVADAS POR FACÇÃO
-	// Para players BluFor
-		"WEST-marker01" setmarkeralpha 0;	
-		"WEST-marker02" setmarkeralpha 0;
-	// Para players OpFor
-		"EAST-marker01" setmarkeralpha 0;	
-		"EAST-marker02" setmarkeralpha 0;
-	// Para players Civillians
-		"CIV-marker01" setmarkeralpha 0;	
-	// Para players Independent
-		//"GUER-marker01" setmarkeralpha 0;	
-		//"GUER-marker02" setmarkeralpha 0;
+// Desnecessário porque o Controle de Visibilidade já faz este papel.
 
-// MARCAS NO MAPA > GAMEPLAY > MARCAS QUE VÃO APARECER NO DECORRER DA MISSÃO
-// infelizmente, não consegui fazer as marcas abaixo ficarem ocultas para suas respectivas facções. Sendo assim, trato elas como se fossem PUBLICAS porém deixando elas no initPlayer para o dia que eu conseguir arrumar isso.
-"marker-civbug01" setmarkeralpha 0;
-"marker-bluforbug01" setmarkeralpha 0;
-"marker-opforbug01" setmarkeralpha 0;
+	// MARCAS NO MAPA > GAMEPLAY > MARCAS QUE VÃO APARECER NO DECORRER DA MISSÃO
+	// infelizmente, não consegui fazer as marcas abaixo ficarem ocultas para suas respectivas facções. Sendo assim, trato elas como se fossem PUBLICAS porém deixando elas no initPlayer para o dia que eu conseguir arrumar isso.
+	"marker-civbug01" setMarkerAlpha 0;
+	"marker-bluforbug01" setMarkerAlpha 0;
+	"marker-opforbug01" setMarkerAlpha 0;
 
 // MARCAS NO MAPA > EDITOR > PRIVADAS DO EDITOR
-// Estão no arquivo init.sqf
-
-// ÁREA JOGÁVEL
-"playableArea.sqf" remoteExec ["BIS_fnc_execVM"];
-"markerPlayableArea" setmarkeralpha 0; // oculta o marcador quando a partida começa.
+"dashboard-sucesso" setMarkerAlpha 0;
+"dashboard-neutro" setMarkerAlpha 0;
+"dashboard-fracasso" setMarkerAlpha 0;

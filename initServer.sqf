@@ -1,35 +1,13 @@
-// Serverside scripts, funcs, etc
+// Nativamente o initServer.sqf é executado somente pelo servidor (seja a máquina de um jogador que está hosteando a missão, seja pelo servidor dedicado. Sua ordem de execução NÃO é garantida, podendo ser iniciado somente após a execução do initPlayerLocal.sqf por exemplo, mas sem dúvida somente depois da execução do init.sqf que é sempre o primeiro init a ser rodado.
 
-// T8 ZONAS ONDE A AI IRÁ SPAWNAR
-"zona01" setmarkeralpha 0;
-"zona02" setmarkeralpha 0;
-"zona03" setmarkeralpha 0;
-"zona04" setmarkeralpha 0;
+// Nunca, neste arquivo, faça validações como " if (isServer)" ou " if (!hasInterface)". Não há essa necessidade porque este arquivo é SOMENTE lido por servidores.
 
-execVM "T8_missionEXEC.sqf";
+// ANIMAÇÃO
+// Abaixo, AI's que estão sendo animadas, porém existe uma certa desincronização das animações para cada player. Caso vc perceba
+// essa desincronização e isso atrapalhe a missão, tente executar tudo isso no init.sqf porém pode estar sobrecarregando aquele arquivo
+// que tem o objetivo de executar tudo antes da partida começar.
 
-// MARCAS NO MAPA > GAMEPLAY > PÚBLICAS PARA TODOS
-"PUB-markerVersion" setmarkeralpha 100;
-"PUB-marker01" setmarkeralpha 100;
-"PUB-marker02" setmarkeralpha 100;
-
-"PUB-marker03" setmarkeralpha 0;
-
-// MARCAS NO MAPA > GAMEPLAY > PRIVADAS POR FACÇÃO
-// Estão no arquivo initPlayerLocal.sqf
-
-// MARCAS NO MAPA > EDITOR > PRIVADAS DO EDITOR
-"dashboard-sucesso" setmarkeralpha 0;
-"dashboard-neutro" setmarkeralpha 0;
-"dashboard-fracasso" setmarkeralpha 0;
-
-// CONVENSÂO DE GENEBRA
-null=[] execVM "genevaConvention.sqf";
-
-// ANIMATIONS
-// All soldiers animations are here for turn around the server sync issue.
-
-	// ambientAnim
+	// ambientAnim (tipos de animação que não reagem se forem estimuladas, como engajamentos, por exemplo):
 	{[controleDaMissao,"BRIEFING","FULL"] call BIS_fnc_ambientAnim} remoteExec ["call",0];
 	{[soldadoAnimado08,"BRIEFING","MEDIUM"] call BIS_fnc_ambientAnim} remoteExec ["call",0];
 	{[soldadoAnimado09,"LISTEN_BRIEFING","FULL"] call BIS_fnc_ambientAnim} remoteExec ["call",0];
@@ -42,7 +20,7 @@ null=[] execVM "genevaConvention.sqf";
 	{[soldadoAnimado16,"PRONE_INJURED_U1","LIGHT"] call BIS_fnc_ambientAnim} remoteExec ["call",0];
 	{[soldadoAnimado17,"KNEEL_TREAT2","FULL"] call BIS_fnc_ambientAnim} remoteExec ["call",0];
 
-	// ambientAnimCombat - these can reative to combat
+	// ambientAnimCombat (tipos de animação que reagem a estimulos como, por exemplo, quando engajadas, deixando a animação e assumindo por definitivo outra postura):
 	{[soldadoAnimado01,"WATCH","FULL",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
 	{[soldadoAnimado02,"WATCH1","RANDOM",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
 	{[soldadoAnimado03,"WATCH2","RANDOM",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
@@ -51,3 +29,10 @@ null=[] execVM "genevaConvention.sqf";
 	{[soldadoAnimado06,"LEAN","FULL",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
 	{[soldadoAnimado07,"SIT_LOW","FULL",{(player distance _this) < 0}] call BIS_fnc_ambientAnimCombat} remoteExec ["call",0];
 	
+// CONVENSÂO DE GENEBRA
+// verifica o número de civis mortos.
+null=[] execVM "genevaConvention.sqf";
+
+// T8 EXECUÇÃO
+// não existe qualquer necessidade do T8 rodar nos clientes ou estar no pacote das primeiras coisas a serem rodadas no início da missão.
+execVM "T8_missionEXEC.sqf";
