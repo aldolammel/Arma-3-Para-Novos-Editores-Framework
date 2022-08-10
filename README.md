@@ -63,6 +63,13 @@ Aqui você encontrará:
 
 dentre muitas outras coisas ainda não listadas acima...
 
+## Instalação / Como usar este framework
+
+1) Aqui no Github, clique em "Code" e depois em "Download ZIP";
+2) Descompacte o ZIP na sua pasta de missões editáveis: C:\Users\<você>\Documents\Arma 3 - Other Profiles\<você>\missions\
+3) Carregue seu Arma 3 com as dependências (mods) necessárias (CBA + ACE);
+4) Dentro do Arma 3, acesse o Eden Editor, selecione o mapa "Virtual Reality" e lá estará a missão "Para novos editores".
+
 ## Changelog
 
 - 2022-01-27 - Redistribuição dos exemplos no mapa para facilitar compreensão dos temas, assim como novos exemplos.
