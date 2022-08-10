@@ -1,0 +1,73 @@
+//O description.ext é um missionConfigFile e é usado para sobrescrever os atributos da missão ou pra definir propriedades globais que vão ficar disponíveis para outros scripts. Este arquivo fica sempre na raiz da missão e suporta apenas um número limitado de classes de config.
+
+// CONFIGS BÁSICAS
+class Header {
+	gameType 			= Sandbox; 	// Coop / DM / CTF / LastMan / Warlords / RPG / SC / KOTH
+	minPlayers			= 1;		// mínimo de jogadores na missão.
+	maxPlayers			= 1;		// máximo de jogadores na missão.
+};
+
+	// Sobre
+	onLoadName 			= "PARA NOVOS EDITORES"; 		// nome da sua missão.
+	author 				= "thy"; 						// nome/nick do editor.
+	overviewPicture 	= "images\thumb.jpg"; 			// thumbnail da missão na tela de loading.
+	onLoadMission 		= "Este framework contém diversos exemplos para acelerar o aprendizado de novos editores. Sem nós, editores, o Arma não passa de um parquinho sem crianças brincando."; // descrição da missão.
+
+	// Gameplay
+	joinUnassigned 		= 0; 	// 0=jogador é automaticamente enviado pro time com menos players. / 1=jogador escolhe sua vaga na tela de Role Assignment antes da partida.
+	respawnOnStart		= 0;	// 1= para vc nascer em um dos pontos de respawn caso você tenha um / 0=vc nascerá onde está seu soldado no mapa.
+	respawn 			= 0; 	// 0=não respawna / 1=como um pássaro / 2=no lugar onde vc morreu / 3=na BASE.
+	respawnButton 		= 0;	// 0= desativar respawns na missão / 1=ativa botão que aparece quando vc usa o rewspawn pra nascer na BASE, por exemplo.
+	respawnDelay 		= 10;	// em segundos quando há respawn.
+	enableTeamSwitch	= 0;	// 0=não permitido trocar de time / 1=permitido.
+	respawnDialog 		= 1; 	// 1=mostrar a pontuação do jogador assim que ele for morto.
+	debriefing 			= 1;	// 0=não / 1=sim.
+	saving 				= 0;	// 0=nao pode salvar a partida / 1=pode salvar a partida.
+	enableDebugConsole 	= 1; 	// 1=console de debug permitido somente para quem hospeda a missão e para os administradores logados / 0=totalmente desligado.
+	aiKills 			= 0;	// Enables AI units score to appear in score table. 0: disabled - 1: enabled. Default: 0
+	
+	// Performance
+	DisabledAI				= 1; 		// 1=desliga as AI das unidades jogáveis / 0=as AI vão jogar com os players caso haja uma ou mais vagas em aberto para jogadores.
+	corpseManagerMode 		= 1;		// 0=desativa o gerenciamento inteligente dos corpos mortos na partida.
+	minPlayerDistance 		= 1000;		// distancia mínima (metros) do player mais próximo para que corpos e carcaças sejam consideradas para remoção após o tempo mínimo.
+	corpseLimit 			= 20;		// quantidade limite de corpos mortos simultâneos na partida.
+	corpseRemovalMinTime	= 600; 		// tempo mínimo (em segundos, 600=10min) que o server levará para deletar os corpos mortos.
+	corpseRemovalMaxTime 	= 600;		// tempo máximo que o server levará para deletar os corpos mortos.
+	wreckManagerMode 		= 1; 		// 1= ativa a limpeza de otimização de performance / 0= desativa.
+	wreckLimit 				= 10;		// quantidade limite de veículos destruídos simultâneos na partida.
+	wreckRemovalMinTime 	= 600; 		// tempo mínimo (em segundos, 600=10min) que o server levará para deletar os veículos destruídos.
+	wreckRemovalMaxTime 	= 600;		// tempo máximo que o server levará para deletar os veículos destruídos.
+	
+// CBA MOD
+cba_settings_hasSettingsFile = 0;
+
+// T8AI (LINHA 1/2)
+#include "T8\CONFIG.hpp"
+
+class cfgFunctions {
+
+	// T8AI (LINHA 2/2)
+	#include "T8\FUNCTIONS.hpp"
+
+	// SISTEMA RESPAWN DE VEÍCULOS
+	#include "vehiclesRespawn\CfgFunctions.hpp"
+};
+
+// SONS CUSTOMIZADOS 
+class CfgRadio {
+	sounds[]={};
+	
+	class exemploAudio1
+	{
+		name = "exemploAudio1";
+		sound[] = {"sounds\exemploAudio1.ogg", db+3, 1.0};
+		title = "";
+	};
+	
+	class exemploAudio2
+	{
+		name = "exemploAudio2";
+		sound[] = {"sounds\exemploAudio2.ogg", db+3, 1.0};
+		title = "";
+	};
+};
