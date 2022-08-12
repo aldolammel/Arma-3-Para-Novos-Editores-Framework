@@ -52,6 +52,7 @@ Aqui você encontrará:
 - Como saber quando player específico obrigatoriamente de veículo passou na trigger;
 - Como saber quando qualquer um (players ou bots) com veículo específico passou na trigger;
 - Como saber quando player específico está dentro de qualquer veículo;
+- Como saber quando um grupo específico está dentro da trigger, usando um veículo qualquer.
 
 **LIDANDO COM GRUPOS**
 
