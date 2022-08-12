@@ -40,20 +40,20 @@
 // estão no init.sqf.
 
 // MARCAS NO MAPA > GAMEPLAY > PÚBLICAS PARA TODOS
-"PUB-marker01" setMarkerAlpha 100;
-"PUB-marker02" setMarkerAlpha 100;
-"PUB-markerVersion" setMarkerAlpha 100;
+"PUB_marker01" setMarkerAlpha 100;
+"PUB_marker02" setMarkerAlpha 100;
+"PUB_markerVersion" setMarkerAlpha 100;
 
 // MARCAS NO MAPA > GAMEPLAY > PRIVADAS POR FACÇÃO
 // Desnecessário porque o Controle de Visibilidade já faz este papel.
 
 	// MARCAS NO MAPA > GAMEPLAY > MARCAS QUE VÃO APARECER NO DECORRER DA MISSÃO
 	// infelizmente, não consegui fazer as marcas abaixo ficarem ocultas para suas respectivas facções. Sendo assim, trato elas como se fossem PUBLICAS porém deixando elas no initPlayer para o dia que eu conseguir arrumar isso.
-	"marker-civbug01" setMarkerAlpha 0;
-	"marker-bluforbug01" setMarkerAlpha 0;
-	"marker-opforbug01" setMarkerAlpha 0;
+	"marker_civbug01" setMarkerAlpha 0;
+	"marker_bluforbug01" setMarkerAlpha 0;
+	"marker_opforbug01" setMarkerAlpha 0;
 
 // MARCAS NO MAPA > EDITOR > PRIVADAS DO EDITOR
-"dashboard-sucesso" setMarkerAlpha 0;
-"dashboard-neutro" setMarkerAlpha 0;
-"dashboard-fracasso" setMarkerAlpha 0;
+"dashboard_sucesso" setMarkerAlpha 0;
+"dashboard_neutro" setMarkerAlpha 0;
+"dashboard_fracasso" setMarkerAlpha 0;

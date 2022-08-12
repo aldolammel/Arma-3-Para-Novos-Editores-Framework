@@ -84,10 +84,10 @@ T8U_var_SupportUnitsRESISTANCE = 	[];
 // O Spawn_A é responsável pelas unidades que spawnaram com o início da partida. Importante: sempre que você adicionar a última linha de unidade a spawnar, não pode haver vírgula. Repare que a linha do grupo _MGTeam1 não possui vírgula final. Veja no Spawn_B e Spawn_C que suas últimas linhas tb não tem. Se vc esquecer uma vírgula ali, dará erro. Ok? Fique atento:
 Spawn_A = 
 [
-	[ [ _MGTeam1, 			"zona01" 			], [ "DEFEND" 				], [ true, true, false ]],
-	[ [ _FULLSquad, 		"zona01" 			], [ "GARRISON" 			], [ true, false, true ]],
-	[ [ _GLTeam, 			"zona01" 			], [ "PATROL" 				], [ true, true, true ]],
-	[ [ _VECTeamLight1,	 	"zona01", false		], [ "PATROL" 				], [ false, true, false ]]
+	[ [ _MGTeam1, 			"zona01", "T8u_fnc_rmNVG" 			], [ "DEFEND" 				], [ true, true, false ]],
+	[ [ _FULLSquad, 		"zona01", "T8u_fnc_rmNVG" 			], [ "GARRISON" 			], [ true, false, true ]],
+	[ [ _GLTeam, 			"zona01", "T8u_fnc_rmNVG" 			], [ "PATROL" 				], [ true, true, true ]],
+	[ [ _VECTeamLight1,	 	"zona01", false, "T8u_fnc_rmNVG"	], [ "PATROL" 				], [ false, true, false ]]
 ];
 
 [ Spawn_A ] spawn T8U_fnc_Spawn;
@@ -95,20 +95,20 @@ Spawn_A =
 // O Spwan_B ou C, D, etc, referece às unidades que spawnaram assim que o player se aproximar de uma zona. Repare que vc pode mandar novas unidades nascerem não apenas em novas zonas mas também em zonas que já sofreram spawn como no caso da zona01. Quando vc pensar em Spawn_B por exemplo, pense que a melhor tradução para isso seja 'leva' ou 'onda'. O Spawn_B é a segunda leva/onda de inimigos. O Spawn_C é a terceira onda e assim por diante:
 Spawn_B = 
 [
-	[ [ _MGTeam2, 			"zona01" 			], [ "DEFEND" 				], [ true, true, false ]],
-	[ [ _SNIPERTeam, 		"zona01" 			], [ "OVERWATCH" 			], [ false, false, false ]],
-	[ [ _FULLSquad, 		"zona02" 			], [ "GARRISON" 			], [ true, false, true ]],
-	[ [ _INFTiny, 			"zona02" 			], [ "OCCUPY", true 		], [ true, false, true ]],
-	[ [ _GLTeam, 			"zona02" 			], [ "PATROL" 				], [ true, false, true ]]
+	[ [ _MGTeam2, 			"zona01", "T8u_fnc_rmNVG" 			], [ "DEFEND" 				], [ true, true, false ]],
+	[ [ _SNIPERTeam, 		"zona01", "T8u_fnc_rmNVG" 			], [ "OVERWATCH" 			], [ false, false, false ]],
+	[ [ _FULLSquad, 		"zona02", "T8u_fnc_rmNVG" 			], [ "GARRISON" 			], [ true, false, true ]],
+	[ [ _INFTiny, 			"zona02", "T8u_fnc_rmNVG" 			], [ "OCCUPY", true 		], [ true, false, true ]],
+	[ [ _GLTeam, 			"zona02", "T8u_fnc_rmNVG" 			], [ "PATROL" 				], [ true, false, true ]]
 ];	
 
 Spawn_C =
 [
-	[ [ _MGTeam2, 			"zona03" 			], [ "DEFEND" 				], [ true, true, false ]],
-	[ [ _FULLSquad, 		"zona03" 			], [ "PATROL" 				], [ true, false, true ]],
-	[ [ _INFTiny, 			"zona03" 			], [ "OCCUPY", true 		], [ true, false, true ]],
-	[ [ _ATTeam, 			"zona04" 			], [ "OCCUPY", true 		], [ true, false, true ]],
-	[ [ _MGTeam2, 			"zona04" 			], [ "DEFEND" 				], [ true, true, false ]]
+	[ [ _MGTeam2, 			"zona03", "T8u_fnc_rmNVG" 			], [ "DEFEND" 				], [ true, true, false ]],
+	[ [ _FULLSquad, 		"zona03", "T8u_fnc_rmNVG" 			], [ "PATROL" 				], [ true, false, true ]],
+	[ [ _INFTiny, 			"zona03", "T8u_fnc_rmNVG" 			], [ "OCCUPY", true 		], [ true, false, true ]],
+	[ [ _ATTeam, 			"zona04", "T8u_fnc_rmNVG" 			], [ "OCCUPY", true 		], [ true, false, true ]],
+	[ [ _MGTeam2, 			"zona04", "T8u_fnc_rmNVG" 			], [ "DEFEND" 				], [ true, true, false ]]
 ];	
 
 // Abaixo é a configuração da zona(s) que spawnaram(ão) inimigos com a aproximação dos players. Repare que vc pode determinar qual será a zona que será o gatilho para o novo Spawn de inimigos além de configurar a distância-limite para o spawn ser disparado;
