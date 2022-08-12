@@ -72,6 +72,8 @@ dentre muitas outras coisas ainda não listadas acima...
 
 ## Changelog
 
+- 2022-08-12 - Atualizado o método "deleteVehicleCrew" para o formato mais novo e simplificado; Adicionado método mais eficiente de detectar grupos dentro de uma trigger; AI T8 script atualizado com a função que remove items (night visions, por exemplo) das unidades spawnadas dinamicamente, se o editor quiser.
+- 2022-07-18 - Adicionado exemplos de nearestObjects; Alguns exemplos foram melhorados; Algumas correções.
 - 2022-01-27 - Redistribuição dos exemplos no mapa para facilitar compreensão dos temas, assim como novos exemplos.
 - 2021-05-05 - Algumas melhorias e novas adições de exemplos práticos.
 - 2020-12-28 - Adicionado novos exemplos, principalmente os relacionados a probabilidade de objetos e unidades spawnarem.
