@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1537;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=9456;
+		nextID=9492;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=31;
+		nextID=34;
 	};
 	class Camera
 	{
-		pos[]={5072.4668,129.35422,1694.5604};
-		dir[]={-0.046481758,-0.54641044,0.8362267};
-		up[]={-0.030325474,0.8375175,0.54556823};
-		aside[]={0.99845868,0,0.055499442};
+		pos[]={4081.6477,168.66296,1704.4137};
+		dir[]={-0.026276659,-0.74214733,0.66973442};
+		up[]={-0.02909453,0.67023045,0.74157989};
+		aside[]={0.99924189,3.0456067e-007,0.03920405};
 	};
 };
 binarizationWanted=0;
@@ -824,7 +824,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=613;
+		items=615;
 		class Item0
 		{
 			dataType="Marker";
@@ -12660,7 +12660,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={5080.146,5,2325.292};
-			angle=3.1224113;
+			angle=3.122411;
 			class Attributes
 			{
 				onActivation="""marker_bluforbug01"" setmarkeralpha 100;" \n "hint ""Abra o mapa e perceba que agora tem uma marca 'Nova marca BluFor' (em vermelho) que não havia antes. Para voltar a ocultá-la, vá até o pedestal à frente onde tem a trigger que dará o comando para ocultar."";";
@@ -22466,7 +22466,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={3572.3679,5,1653.7061};
-			angle=3.1619954;
+			angle=3.1619952;
 			class Attributes
 			{
 				onActivation="[""Há 2 veículos que vão spawnar: um quad e uma SUV. Existe 33% de chances de um TANK spawnar, porém se ele spawnar, não haverá quad nem SUV disponíveis.""] remoteExec [""hint""];";
@@ -22587,7 +22587,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={3568.229,5,1640.246};
-			angle=3.1619954;
+			angle=3.1619952;
 			class Attributes
 			{
 				onActivation="[""Já neste exemplo, é a mesma mecânica vista acima, porém aqui consideramos que cada veículo tem sua tripulação. Então os tripulantes precisariam ser removidos tb.\n\nA regra aqui é: são dois quadricilhos. Se o quad da DIREITA spawnar (50% de chances), o quad da ESQUERDA será obrigatoriamente deletado. Se o quad da ESQUERDA estiver no mapa, quer dizer que o quad da DIREITA não spawnou quando a missão foi carregada.""] remoteExec [""hint""];";
@@ -23111,7 +23111,7 @@ class Mission
 			dataType="Marker";
 			position[]={1273.082,5,5341.4038};
 			name="PUB_markerVersion";
-			text="     VERSION AUG, 12th 2022";
+			text="     VERSION AUG, 12th B 2022";
 			type="mil_box";
 			id=5750;
 		};
@@ -33914,17 +33914,18 @@ class Mission
 		class Item464
 		{
 			dataType="Trigger";
-			position[]={3229.1655,5.0050001,1819.2815};
+			position[]={3229.166,5.0050001,1819.281};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle1;" \n "veiculo1 = createVehicle [""B_G_Quadbike_01_F"", [_pos select 0, _pos select 1, _pos select 2], [], 10, ""NONE""];" \n "hint ""Essa trigger criou um objeto/veículo específico chamado 'veiculo1' em uma posição aleatória dentro dum raio-limite de 10 metros do objeto nomeado 'spawnVehicle1'.\n\nCaso o veiculo1 deva nascer no ar, no Editor basta arrascar o spawnVehicle1 para a altitude desejada. Caso sua intensão seja que o veiculo1 nasça num ponto exato, substitua o valor 10 pelo 0. \n\nO veiculo1 automaticamente evitará colidir com outros objetos do mapa."";";
+				onActivation="_pos = getPosATL spawnVehicle1; " \n "veiculo1 = createVehicle [""B_G_Quadbike_01_F"", [_pos select 0, _pos select 1, _pos select 2], [], 10, ""NONE""]; " \n "[""Essa trigger criou um objeto/veículo específico chamado 'veiculo1' em uma posição aleatória dentro dum raio-limite de 10 metros do objeto nomeado 'spawnVehicle1'.\n\nCaso o veiculo1 deva nascer no ar, no Editor basta arrascar o spawnVehicle1 para a altitude desejada. Caso sua intensão seja que o veiculo1 nasça num ponto exato, substitua o valor 10 pelo 0. \n\nO veiculo1 automaticamente evitará colidir com outros objetos do mapa.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=6685;
 			type="EmptyDetectorAreaR50";
@@ -33936,7 +33937,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=13;
+				items=14;
 				class Item0
 				{
 					dataType="Object";
@@ -34207,14 +34208,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3884.0586,5.0014391,1805.9797};
+						position[]={3884.0591,5.0014391,1805.9801};
 						angles[]={0,6.2736559,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
-						description="Spawnando veículo com combustível e/ou vida já baixa";
+						description="Spawnando veículo com combustível já baixo";
 						isPlayable=1;
 						class Inventory
 						{
@@ -35108,6 +35109,88 @@ class Mission
 						nAttributes=4;
 					};
 				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4162.8062,5.0014391,1802.572};
+						angles[]={0,6.2736559,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Spawnando uma aeronave já em voo (com destino único)";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=9491;
+					type="B_recon_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male08ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
 			};
 			class Attributes
 			{
@@ -35127,17 +35210,18 @@ class Mission
 		class Item467
 		{
 			dataType="Trigger";
-			position[]={3303.9175,5.0050001,1820.4375};
+			position[]={3303.917,5.0050001,1820.438};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle2;" \n "veiculo2 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""];" \n "createVehicleCrew veiculo2;" \n "hint ""Foi criado o veículo 'veiculo2' e sua tripulação, lembrando que neste código a tripulação respeitará o lado e a facção do veículo criado. Ou seja, se você quer que a tripulação seja da CSAT (dos OPFOR), certifique-se de escolher um veículo da CSAT."";";
+				onActivation="_pos = getPosATL spawnVehicle2; " \n "veiculo2 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""]; " \n "createVehicleCrew veiculo2; " \n "group veiculo2 deleteGroupWhenEmpty true; " \n "[""Foi criado o veículo 'veiculo2' e sua tripulação, lembrando que neste código a tripulação respeitará o lado e a facção do veículo criado. Ou seja, se você quer que a tripulação seja da CSAT (dos OPFOR), certifique-se de escolher um veículo da CSAT.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=6750;
 			type="EmptyDetectorAreaR50";
@@ -35156,17 +35240,18 @@ class Mission
 		class Item469
 		{
 			dataType="Trigger";
-			position[]={4033.0005,5.0050001,1807.8545};
+			position[]={4033,5.0050001,1807.854};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle5;" \n "aviao1 = createVehicle [""B_Plane_CAS_01_dynamicLoadout_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""FLY""];" \n "createVehicleCrew aviao1;" \n "hint ""Olhe pra cima! Para criar aeronaves já em pleno voo, o código é o mesmo para criar objetos e veículos de solo, porém no lugar da string 'NONE' deve ser usado 'FLY', o que impulsionará a aeronave para que ela não caia ao solo. Lembre-se de adicionar tripulação caso contrário nenhuma string fará essa porra voar hehe.\n\nVale lembrar que neste modo de spawn, a aeronave voará livremente, sem destino específico."";";
+				onActivation="_pos = getPosATL spawnVehicle5; " \n "aviao1 = createVehicle [""B_Plane_CAS_01_dynamicLoadout_F"", [_pos select 0, _pos select 1, _pos select 2], [], 130, ""FLY""]; " \n "createVehicleCrew aviao1; " \n "group aviao1 deleteGroupWhenEmpty true; " \n "[""Olhe pra cima! Criei uma aeronave já há 130m de altitude. Para criar aeronaves já em pleno voo, o código é o mesmo para criar objetos e veículos de solo, porém no lugar da string 'NONE' deve ser usado 'FLY', o que impulsionará a aeronave para que ela não caia ao solo. Lembre-se de adicionar tripulação caso contrário nenhuma string fará essa porra voar hehe.\n\nVale lembrar que neste modo de spawn, a aeronave voará livremente, sem destino específico.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=6784;
 			type="EmptyDetectorAreaR50";
@@ -35195,17 +35280,18 @@ class Mission
 		class Item472
 		{
 			dataType="Trigger";
-			position[]={3884.293,5.0050001,1812.4092};
+			position[]={3884.293,5.0050001,1812.4091};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle4;" \n "veiculo4 = createVehicle [""B_G_Quadbike_01_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""];" \n "hint ""xxxxx."";";
+				onActivation="_pos = getPosATL spawnVehicle4; " \n "veiculo4 = createVehicle [""B_G_Quadbike_01_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""]; " \n "veiculo4 setFuel 0.5; " \n "[""Assim que entrar no veículo, repare que o combustível está baixo.\n\nLembre-se de sempre consultar a wiki do Arma 3 pra ver como os comandos funcionam. No caso do setFuel: https://community.bistudio.com/wiki/setFuel""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=6817;
 			type="EmptyDetectorAreaR50";
@@ -35216,42 +35302,33 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={3884.4541,5,1780.4067};
+				position[]={3884.4541,5,1780.407};
 			};
-			title="Spawnando veículo com combustível e/ou vida já baixa";
+			title="Spawnando veículo com combustível já baixo";
 			id=6845;
 		};
 		class Item474
 		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={3884.5947,5,1769.1028};
-			};
-			title="EM BREVE";
-			id=6846;
-		};
-		class Item475
-		{
 			dataType="Trigger";
-			position[]={4033.0044,5.0050001,1826.6235};
+			position[]={4033.0039,5.0050001,1826.624};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="trigger que deletará o avião e sua tripulação.";
 				condition="this && alive aviao1;";
-				onActivation="{aviao1 deleteVehicleCrew _x} forEach crew aviao1;" \n "deleteVehicle aviao1;" \n "hint ""Agora vc deletou a aeronave e sua tripulação. Certifique-se de, no código, vc deletar a tripulação primeiro que o veículo. Caso contrário, ao deletar o veículo primeiro, o Arma não sabe mais quem são seus tripulantes, mantendo-os no mapa."";";
+				onActivation="deleteVehicleCrew aviao1; " \n "deleteVehicle aviao1; " \n "[""Agora vc deletou a aeronave e sua tripulação. Certifique-se de, no código, vc deletar a tripulação primeiro que o veículo. Caso contrário, ao deletar o veículo primeiro, o Arma não sabe mais quem são seus tripulantes, mantendo-os no mapa.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=6907;
 			type="EmptyDetectorAreaR50";
 			atlOffset=0.0050001144;
 		};
-		class Item476
+		class Item475
 		{
 			dataType="Group";
 			side="West";
@@ -35507,7 +35584,7 @@ class Mission
 			};
 			id=6910;
 		};
-		class Item477
+		class Item476
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35715,7 +35792,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item478
+		class Item477
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35758,7 +35835,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item479
+		class Item478
 		{
 			dataType="Object";
 			class PositionInfo
@@ -35966,7 +36043,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item480
+		class Item479
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -35976,11 +36053,11 @@ class Mission
 			title="Básico sobre deletar veículos e tripulações";
 			id=6919;
 		};
-		class Item481
+		class Item480
 		{
 			dataType="Trigger";
 			position[]={3234.3,5.8130002,1671.297};
-			angle=1.3616532;
+			angle=1.361653;
 			class Attributes
 			{
 				name="trgTotemJeepsColoridos";
@@ -35996,7 +36073,7 @@ class Mission
 			type="EmptyDetector";
 			atlOffset=0.8130002;
 		};
-		class Item482
+		class Item481
 		{
 			dataType="Group";
 			side="West";
@@ -36312,7 +36389,7 @@ class Mission
 			};
 			id=6922;
 		};
-		class Item483
+		class Item482
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36355,7 +36432,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item484
+		class Item483
 		{
 			dataType="Trigger";
 			position[]={3236.698,5.8130002,1660.396};
@@ -36375,7 +36452,7 @@ class Mission
 			type="EmptyDetector";
 			atlOffset=0.8130002;
 		};
-		class Item485
+		class Item484
 		{
 			dataType="Group";
 			side="West";
@@ -36718,7 +36795,7 @@ class Mission
 			};
 			id=6963;
 		};
-		class Item486
+		class Item485
 		{
 			dataType="Object";
 			class PositionInfo
@@ -36926,7 +37003,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item487
+		class Item486
 		{
 			dataType="Trigger";
 			position[]={3231.156,5.8130002,1655.449};
@@ -36946,7 +37023,7 @@ class Mission
 			type="EmptyDetector";
 			atlOffset=0.8130002;
 		};
-		class Item488
+		class Item487
 		{
 			dataType="Trigger";
 			position[]={3226.927,5,1665.729};
@@ -36961,7 +37038,7 @@ class Mission
 			id=6973;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item489
+		class Item488
 		{
 			dataType="Trigger";
 			position[]={3242.241,5,1639.939};
@@ -36980,7 +37057,7 @@ class Mission
 			id=6981;
 			type="EmptyDetector";
 		};
-		class Item490
+		class Item489
 		{
 			dataType="Trigger";
 			position[]={3247.2319,5,1674.1281};
@@ -36994,7 +37071,7 @@ class Mission
 			id=6982;
 			type="EmptyDetector";
 		};
-		class Item491
+		class Item490
 		{
 			dataType="Trigger";
 			position[]={3242.3379,5,1662.041};
@@ -37010,7 +37087,7 @@ class Mission
 			id=6983;
 			type="EmptyDetector";
 		};
-		class Item492
+		class Item491
 		{
 			dataType="Trigger";
 			position[]={3279.844,5,1676.224};
@@ -37028,7 +37105,7 @@ class Mission
 			id=6984;
 			type="EmptyDetector";
 		};
-		class Item493
+		class Item492
 		{
 			dataType="Trigger";
 			position[]={3235.979,5,1646.21};
@@ -37043,7 +37120,7 @@ class Mission
 			id=6986;
 			type="EmptyDetector";
 		};
-		class Item494
+		class Item493
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37053,7 +37130,7 @@ class Mission
 			title="EM BREVE";
 			id=7003;
 		};
-		class Item495
+		class Item494
 		{
 			dataType="Trigger";
 			position[]={3714.187,5,2535.635};
@@ -37070,7 +37147,7 @@ class Mission
 			id=7013;
 			type="EmptyDetector";
 		};
-		class Item496
+		class Item495
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37080,54 +37157,56 @@ class Mission
 			title="Executa trigger só se todos os players vivos estiverem nela";
 			id=7014;
 		};
-		class Item497
+		class Item496
 		{
 			dataType="Trigger";
-			position[]={3229.0786,5,1841.5385};
+			position[]={3229.0791,5,1841.538};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="trigger que deletará o avião e sua tripulação.";
 				condition="this && alive veiculo1;";
-				onActivation="deleteVehicle veiculo1;" \n "hint ""Como vc spawnou o objeto 'veiculo1' e vc está dentro desta trigger, vc acabou de deletar o veiculo1."";";
+				onActivation="deleteVehicle veiculo1;" \n "[""Como vc spawnou o objeto 'veiculo1' e vc está dentro desta trigger, vc acabou de deletar o veiculo1.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7016;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item498
+		class Item497
 		{
 			dataType="Trigger";
-			position[]={3304.4326,5,1842.1315};
+			position[]={3304.4331,5,1842.131};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="trigger que deletará o avião e sua tripulação.";
 				condition="this && alive veiculo2;";
-				onActivation="{veiculo2 deleteVehicleCrew _x} forEach crew veiculo2; " \n "deleteVehicle veiculo2;" \n "hint ""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação. No código, sempre delete a tripulação primeiro que o veículo para evitar que o veículo seja deletado e a tripulação mantida no mapa."";";
+				onActivation="deleteVehicleCrew veiculo2;  " \n "deleteVehicle veiculo2; " \n "[""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação. No código, sempre delete a tripulação primeiro que o veículo para evitar que o veículo seja deletado e a tripulação mantida no mapa.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7018;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item499
+		class Item498
 		{
 			dataType="Trigger";
-			position[]={3415.0415,5,1817.4824};
+			position[]={3415.042,5,1817.4821};
 			angle=5.8047032;
 			class Attributes
 			{
 				text="trigger que deletará o veiculo e sua tripulação.";
 				condition="this && alive veiculo3;";
-				onActivation="{veiculo3 deleteVehicleCrew _x} forEach crew veiculo3; " \n "deleteVehicle veiculo3;" \n "hint ""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação."";";
+				onActivation="deleteVehicleCrew veiculo3;  " \n "deleteVehicle veiculo3; " \n "[""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
@@ -37137,44 +37216,46 @@ class Mission
 			id=7020;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item500
+		class Item499
 		{
 			dataType="Trigger";
-			position[]={3884.8955,5,1831.1375};
+			position[]={3884.896,5,1831.137};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="trigger que deletará o avião e sua tripulação.";
 				condition="this && alive veiculo4;";
-				onActivation="{veiculo4 deleteVehicleCrew _x} forEach crew veiculo4; " \n "deleteVehicle veiculo4;" \n "hint ""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação."";";
+				onActivation="deleteVehicle veiculo4; " \n "hint ""Como vc spawnou um veículo, ao tocar nessa trigger vc deletou o veículo."";";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7022;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item501
+		class Item500
 		{
 			dataType="Trigger";
-			position[]={4097.5708,5,1810.6995};
+			position[]={4097.5708,5,1810.699};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle6;" \n "aviao2 = createVehicle [""B_Plane_CAS_01_dynamicLoadout_F"", [_pos select 0, _pos select 1, _pos select 2], [], 50, ""FLY""];" \n "createVehicleCrew aviao2;" \n "group aviao2 addWaypoint [position waypoint1aviao, 0];" \n "[group aviao2, 0] setWaypointType ""MOVE""; " \n "[group aviao2, 0] setWaypointSpeed ""FULL""; " \n "[group aviao2, 0] setWaypointBehaviour ""AWARE"";" \n "hint ""Olhe pra cima! O aviao e tripulação foram criados.\n\nComo neste exemplo o avião seguirá para a posição do waypoint (eu o pus no canto-esquerdo-inferior do mapa), ou seja, vc verá o avião fazendo uma curva para a esquerda e seguindo para trás até sumir de vista.\n\nSe a criação do avião na missão for apenas cosmético, vocÊ pode configurar o 'setWaypointBehaviour' como 'CARELESS' para ele não dar bola para nada entre ele e o waypoint."";";
+				onActivation="_pos = getPosATL spawnVehicle6;  " \n "aviao2 = createVehicle [""B_Plane_CAS_01_dynamicLoadout_F"", [_pos select 0, _pos select 1, _pos select 2], [], 120, ""FLY""];  " \n "createVehicleCrew aviao2;  " \n "group aviao2 deleteGroupWhenEmpty true;  " \n "group aviao2 addWaypoint [position waypoint1aviao, 0];  " \n "[group aviao2, 0] setWaypointType ""MOVE"";   " \n "[group aviao2, 0] setWaypointSpeed ""FULL"";   " \n "[group aviao2, 0] setWaypointBehaviour ""AWARE"";  " \n "[""Olhe pra cima! O aviao e tripulação foram criados a 120 metros de altitude.\n\nComo neste exemplo o avião seguirá para a posição do waypoint (eu o pus no canto-esquerdo-inferior do mapa), ou seja, vc verá o avião fazendo uma curva para a esquerda e seguindo para trás até sumir de vista.\n\nSe a criação do avião na missão for apenas cosmético, vocÊ pode configurar o 'setWaypointBehaviour' como 'CARELESS' para ele não dar bola para nada entre ele e o waypoint.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7026;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item502
+		class Item501
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37184,45 +37265,47 @@ class Mission
 			title="Spawnando uma aeronave já em voo (com waypoints)";
 			id=7054;
 		};
-		class Item503
+		class Item502
 		{
 			dataType="Trigger";
-			position[]={4097.5894,5.0050001,1827.0225};
+			position[]={4097.5889,5.0050001,1827.022};
 			angle=1.5742172;
 			class Attributes
 			{
 				text="trigger que deletará o avião e sua tripulação.";
 				condition="this && alive aviao2;";
-				onActivation="{aviao2 deleteVehicleCrew _x} forEach crew aviao2;" \n "deleteVehicle aviao2;" \n "hint ""Agora vc deletou a aeronave e sua tripulação. Certifique-se de, no código, vc deletar a tripulação primeiro que o veículo. Caso contrário, ao deletar o veículo primeiro, o Arma não sabe mais quem são seus tripulantes, mantendo-os no mapa."";";
+				onActivation="deleteVehicleCrew aviao2; " \n "deleteVehicle aviao2; " \n "[""Agora vc deletou a aeronave e sua tripulação. Certifique-se de, no código, vc deletar a tripulação primeiro que o veículo. Caso contrário, ao deletar o veículo primeiro, o Arma não sabe mais quem são seus tripulantes, mantendo-os no mapa.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7056;
 			type="EmptyDetectorAreaR50";
 			atlOffset=0.0050001144;
 		};
-		class Item504
+		class Item503
 		{
 			dataType="Trigger";
-			position[]={3399.5696,5,1818.2164};
-			angle=2.5389113;
+			position[]={3399.5701,5,1818.2159};
+			angle=2.5389123;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle3;" \n "veiculo3 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""];" \n "createVehicleCrew veiculo3;" \n "veiculo3 engineOn true;" \n "_speed = 30;" \n "veiculo3 setVelocity [(velocity veiculo3 select 0)+(sin direction veiculo3 * _speed),(velocity veiculo3 select 1)+(cos direction veiculo3 * _speed),(velocity veiculo3 select 2)];" \n "hint ""xxxxxxx"";";
+				onActivation="_pos = getPosATL spawnVehicle3; " \n "veiculo3 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""]; " \n "createVehicleCrew veiculo3; " \n "group veiculo3 deleteGroupWhenEmpty true;  " \n "veiculo3 engineOn true; " \n "_speed = 30; " \n "veiculo3 setVelocity [(velocity veiculo3 select 0) + (sin direction veiculo3 * _speed), (velocity veiculo3 select 1) + (cos direction veiculo3 * _speed), (velocity veiculo3 select 2)]; " \n "[""xxxxxxx""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7059;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item505
+		class Item504
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37232,44 +37315,46 @@ class Mission
 			title="Spawnando veículo já em movimento (com waypoint até ponto específico)";
 			id=7087;
 		};
-		class Item506
+		class Item505
 		{
 			dataType="Trigger";
-			position[]={3523.592,5,1827.8961};
+			position[]={3523.592,5,1827.896};
 			angle=4.6862788;
 			class Attributes
 			{
 				text="trigger que deletará o veiculo e sua tripulação.";
 				condition="this && alive veiculo5;";
-				onActivation="{veiculo5 deleteVehicleCrew _x} forEach crew veiculo5; " \n "deleteVehicle veiculo5;" \n "hint ""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação."";";
+				onActivation="deleteVehicleCrew veiculo5;  " \n "deleteVehicle veiculo5; " \n "[""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7125;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item507
+		class Item506
 		{
 			dataType="Trigger";
-			position[]={3513.3926,5,1815.2595};
+			position[]={3513.3931,5,1815.26};
 			angle=1.5570256;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle7;" \n "veiculo5 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""];" \n "createVehicleCrew veiculo5;" \n "group veiculo5 addWaypoint [position waypointDoVeiculo, 0];" \n "[group veiculo5, 0] setWaypointType ""MOVE""; " \n "[group veiculo5, 0] setWaypointSpeed ""FULL""; " \n "[group veiculo5, 0] setWaypointBehaviour ""AWARE"";" \n "hint ""Assim que o veículo e a tripulação nascerem, o veículo seguirá até o objeto nomeado como 'waypointDoVeiculo'."";";
+				onActivation="_pos = getPosATL spawnVehicle7; " \n "veiculo5 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""]; " \n "createVehicleCrew veiculo5; " \n "group veiculo5 deleteGroupWhenEmpty true;   " \n "group veiculo5 addWaypoint [position waypointDoVeiculo, 0]; " \n "[group veiculo5, 0] setWaypointType ""MOVE"";  " \n "[group veiculo5, 0] setWaypointSpeed ""FULL"";  " \n "[group veiculo5, 0] setWaypointBehaviour ""AWARE""; " \n "[""Assim que o veículo e a tripulação nascerem, o veículo seguirá até o objeto nomeado como 'waypointDoVeiculo'.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7126;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item508
+		class Item507
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37279,44 +37364,46 @@ class Mission
 			title="Spawnando veículo já em movimento (com waypoints até player específico)";
 			id=7193;
 		};
-		class Item509
+		class Item508
 		{
 			dataType="Trigger";
-			position[]={3648.2644,5,1819.8752};
+			position[]={3648.2639,5,1819.875};
 			angle=4.6876397;
 			class Attributes
 			{
 				text="trigger que deletará o veiculo e sua tripulação.";
 				condition="this && alive veiculo6;";
-				onActivation="{veiculo6 deleteVehicleCrew _x} forEach crew veiculo6; " \n "deleteVehicle veiculo6;" \n "hint ""Como vc spawnou um veículo e tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação."";";
+				onActivation="deleteVehicleCrew veiculo6;  " \n "deleteVehicle veiculo6; " \n "[""Como vc spawnou um veículo e tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7217;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item510
+		class Item509
 		{
 			dataType="Trigger";
-			position[]={3641.0767,5,1812.3534};
-			angle=1.5477474;
+			position[]={3641.0769,5,1812.353};
+			angle=1.5477406;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle8;" \n "veiculo6 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""];" \n "createVehicleCrew veiculo6;" \n "group veiculo6 addWaypoint [position playerLiderVeiculo, 0];" \n "hint ""Assim que o veiculo6 nascer, ele e sua tripulação virão até o player chamado playerLiderVeiculo"";";
+				onActivation="_pos = getPosATL spawnVehicle8; " \n "veiculo6 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""]; " \n "createVehicleCrew veiculo6; " \n "group veiculo6 deleteGroupWhenEmpty true; " \n "group veiculo6 addWaypoint [position playerLiderVeiculo, 0]; " \n "[""Assim que o veiculo6 nascer, ele e sua tripulação virão até o player chamado playerLiderVeiculo""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7218;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item511
+		class Item510
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37327,44 +37414,46 @@ class Mission
 			description="Quero fazer com que o veículo fique patrulhando eternamente entre dois ou mais pontos.";
 			id=7282;
 		};
-		class Item512
+		class Item511
 		{
 			dataType="Trigger";
-			position[]={3783.1855,5,1818.1525};
+			position[]={3783.186,5,1818.152};
 			angle=4.6862788;
 			class Attributes
 			{
 				text="trigger que deletará o veiculo e sua tripulação.";
 				condition="this && alive veiculo7;";
-				onActivation="{veiculo7 deleteVehicleCrew _x} forEach crew veiculo7; " \n "deleteVehicle veiculo7;" \n "hint ""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação."";";
+				onActivation="deleteVehicleCrew veiculo7;  " \n "deleteVehicle veiculo7; " \n "[""Como vc spawnou um veículo com sua tripulação, ao tocar nessa trigger vc deletou tanto o veículo quanto sua tripulação.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7306;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item513
+		class Item512
 		{
 			dataType="Trigger";
-			position[]={3771.7336,5,1811.2784};
+			position[]={3771.7339,5,1811.278};
 			angle=1.5570256;
 			class Attributes
 			{
 				text="Esta trigger inicia a demonstração.";
-				onActivation="_pos = getPosATL spawnVehicle9;" \n "veiculo7 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""];" \n "createVehicleCrew veiculo7;" \n "group veiculo7 addWaypoint [position waypoint1, 0];" \n "[group veiculo7, 0] setWaypointType ""MOVE""; " \n "group veiculo7 addWaypoint [position waypoint2, 0];" \n "[group veiculo7, 0] setWaypointType ""MOVE""; " \n "hint ""Assim que o veículo e a tripulação nascerem, o veículo seguirá até o 'waypoint1' e depois até o 'waypoint2'."";";
+				onActivation="_pos = getPosATL spawnVehicle9; " \n "veiculo7 = createVehicle [""B_G_Offroad_01_armed_F"", [_pos select 0, _pos select 1, _pos select 2], [], 0, ""NONE""]; " \n "createVehicleCrew veiculo7; " \n "group veiculo7 deleteGroupWhenEmpty true; " \n "group veiculo7 addWaypoint [position waypoint1, 0]; " \n "[group veiculo7, 0] setWaypointType ""MOVE"";  " \n "group veiculo7 addWaypoint [position waypoint2, 0]; " \n "[group veiculo7, 0] setWaypointType ""MOVE"";  " \n "[""Assim que o veículo e a tripulação nascerem, o veículo seguirá até o 'waypoint1' e depois até o 'waypoint2'.""] remoteExec [""hint""];";
 				sizeA=2.0039999;
 				sizeB=1.289;
 				sizeC=1.995;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=7307;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item514
+		class Item513
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37374,7 +37463,7 @@ class Mission
 			title="EM BREVE";
 			id=7369;
 		};
-		class Item515
+		class Item514
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37384,7 +37473,7 @@ class Mission
 			title="Deleta veículo e tripulação se eles saírem de uma região";
 			id=7450;
 		};
-		class Item516
+		class Item515
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37394,7 +37483,7 @@ class Mission
 			title="Em breve";
 			id=7451;
 		};
-		class Item517
+		class Item516
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -37405,7 +37494,7 @@ class Mission
 			description="Referente ao exemplo ""Spawnando uma aeronave já em voo (com waypoints)"".";
 			id=7453;
 		};
-		class Item518
+		class Item517
 		{
 			dataType="Trigger";
 			position[]={131.479,326.90277,124.996};
@@ -37423,7 +37512,7 @@ class Mission
 			type="EmptyDetectorAreaR250";
 			atlOffset=321.90277;
 		};
-		class Item519
+		class Item518
 		{
 			dataType="Group";
 			side="West";
@@ -38046,7 +38135,7 @@ class Mission
 			};
 			id=7459;
 		};
-		class Item520
+		class Item519
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38056,7 +38145,7 @@ class Mission
 			title="Trancando compartimento de carga";
 			id=7463;
 		};
-		class Item521
+		class Item520
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38066,7 +38155,7 @@ class Mission
 			title="Trancando e destrancando veículo para players";
 			id=7464;
 		};
-		class Item522
+		class Item521
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38076,7 +38165,7 @@ class Mission
 			title="Trancando apenas posição de motorista";
 			id=7465;
 		};
-		class Item523
+		class Item522
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38086,7 +38175,7 @@ class Mission
 			title="Ligar motor do veículo sem player ou bot dentro";
 			id=7466;
 		};
-		class Item524
+		class Item523
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38096,7 +38185,7 @@ class Mission
 			title="Manter luzes do veículo desligadas mesmo rodando a noite";
 			id=7467;
 		};
-		class Item525
+		class Item524
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38106,7 +38195,7 @@ class Mission
 			title="Desativando apenas a visão termal dos carros de combate";
 			id=7468;
 		};
-		class Item526
+		class Item525
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38116,7 +38205,7 @@ class Mission
 			title="Forçando assinatura térmica em qualquer veículo mesmo desligado";
 			id=7469;
 		};
-		class Item527
+		class Item526
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38126,7 +38215,7 @@ class Mission
 			title="Removendo um tipo de munição de carros de combate";
 			id=7470;
 		};
-		class Item528
+		class Item527
 		{
 			dataType="Trigger";
 			position[]={6206.6401,5,3023.5371};
@@ -38145,7 +38234,7 @@ class Mission
 			id=7474;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item529
+		class Item528
 		{
 			dataType="Trigger";
 			position[]={5097.5112,5,2316.8799};
@@ -38163,11 +38252,11 @@ class Mission
 			id=7518;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item530
+		class Item529
 		{
 			dataType="Trigger";
 			position[]={5097.0039,5,2325.292};
-			angle=3.1261463;
+			angle=3.1261458;
 			class Attributes
 			{
 				onActivation="""marker_opforbug01"" setmarkeralpha 100;" \n "hint ""Abra o mapa e perceba que agora tem uma marca 'Nova marca OpFor' (em verde) que não havia antes. Para voltar a ocultá-la, vá até o pedestal à frente onde tem a trigger que dará o comando para ocultar."";";
@@ -38182,7 +38271,7 @@ class Mission
 			id=7519;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item531
+		class Item530
 		{
 			dataType="Marker";
 			position[]={5225.5278,5,2391.7581};
@@ -38192,7 +38281,7 @@ class Mission
 			colorName="ColorEAST";
 			id=7522;
 		};
-		class Item532
+		class Item531
 		{
 			dataType="Trigger";
 			position[]={5116.5659,5,2315.696};
@@ -38210,7 +38299,7 @@ class Mission
 			id=7548;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item533
+		class Item532
 		{
 			dataType="Trigger";
 			position[]={5116.0532,5,2325.229};
@@ -38229,7 +38318,7 @@ class Mission
 			id=7549;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item534
+		class Item533
 		{
 			dataType="Group";
 			side="West";
@@ -38367,7 +38456,7 @@ class Mission
 			};
 			id=7578;
 		};
-		class Item535
+		class Item534
 		{
 			dataType="Group";
 			side="West";
@@ -38469,7 +38558,7 @@ class Mission
 			};
 			id=7579;
 		};
-		class Item536
+		class Item535
 		{
 			dataType="Group";
 			side="East";
@@ -38560,7 +38649,7 @@ class Mission
 			};
 			id=7580;
 		};
-		class Item537
+		class Item536
 		{
 			dataType="Marker";
 			position[]={5226.0249,5,2373.168};
@@ -38570,7 +38659,7 @@ class Mission
 			colorName="ColorCIV";
 			id=7582;
 		};
-		class Item538
+		class Item537
 		{
 			dataType="Group";
 			side="Civilian";
@@ -38644,7 +38733,7 @@ class Mission
 			};
 			id=7583;
 		};
-		class Item539
+		class Item538
 		{
 			dataType="Group";
 			side="West";
@@ -38729,7 +38818,7 @@ class Mission
 			};
 			id=7585;
 		};
-		class Item540
+		class Item539
 		{
 			dataType="Marker";
 			position[]={5106.583,5,2396.395};
@@ -38744,7 +38833,7 @@ class Mission
 			drawBorder=1;
 			id=7587;
 		};
-		class Item541
+		class Item540
 		{
 			dataType="Marker";
 			position[]={5106.2798,5,2392.085};
@@ -38754,7 +38843,7 @@ class Mission
 			colorName="ColorUNKNOWN";
 			id=7588;
 		};
-		class Item542
+		class Item541
 		{
 			dataType="Marker";
 			position[]={4909.1211,5,2408.384};
@@ -38764,7 +38853,7 @@ class Mission
 			colorName="ColorRed";
 			id=7589;
 		};
-		class Item543
+		class Item542
 		{
 			dataType="Marker";
 			position[]={4909.0288,5,2390.302};
@@ -38774,7 +38863,7 @@ class Mission
 			colorName="ColorGreen";
 			id=7596;
 		};
-		class Item544
+		class Item543
 		{
 			dataType="Marker";
 			position[]={4909.6519,5,2372.0029};
@@ -38784,11 +38873,11 @@ class Mission
 			colorName="ColorBlue";
 			id=7597;
 		};
-		class Item545
+		class Item544
 		{
 			dataType="Trigger";
 			position[]={5097.7139,5,2341.2161};
-			angle=1.5570604;
+			angle=1.55706;
 			class Attributes
 			{
 				onActivation="hint ""INFORMAÇÃO: No mapa, há uma bola amarela marcada. Ela é uma marcação comum (que fica no mapa desde o início da missão) e pública, ou seja, é visível propositalmente para todos os players, independente de sua facção.\n\nSe sua missão for SinglePlayer ou Coop que players terão somente uma mesma facção, nem se preocupe em tornar as marcações específicas para Civil, BluFor, OpFor ou Independente"";";
@@ -38803,7 +38892,7 @@ class Mission
 			id=7609;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item546
+		class Item545
 		{
 			dataType="Marker";
 			position[]={3232.8596,5,1452.78};
@@ -38811,7 +38900,7 @@ class Mission
 			type="Empty";
 			id=7611;
 		};
-		class Item547
+		class Item546
 		{
 			dataType="Marker";
 			position[]={3248.179,5,1452.78};
@@ -38819,7 +38908,7 @@ class Mission
 			type="Empty";
 			id=7612;
 		};
-		class Item548
+		class Item547
 		{
 			dataType="Marker";
 			position[]={3263.0369,5,1452.9341};
@@ -38827,7 +38916,7 @@ class Mission
 			type="Empty";
 			id=7613;
 		};
-		class Item549
+		class Item548
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38837,7 +38926,7 @@ class Mission
 			title="Grupo ou soldado spawnando aleatoriamente (dinamicamente via script) [modo avançado]";
 			id=7644;
 		};
-		class Item550
+		class Item549
 		{
 			dataType="Trigger";
 			position[]={3530.582,5,1442.3002};
@@ -38855,7 +38944,7 @@ class Mission
 			id=7645;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item551
+		class Item550
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -38866,7 +38955,7 @@ class Mission
 			title="Tornando coisas e pessoas invisíveis";
 			id=7916;
 		};
-		class Item552
+		class Item551
 		{
 			dataType="Trigger";
 			position[]={4969.8521,5,1818.14};
@@ -38883,7 +38972,7 @@ class Mission
 			id=7919;
 			type="EmptyDetector";
 		};
-		class Item553
+		class Item552
 		{
 			dataType="Group";
 			side="East";
@@ -39087,7 +39176,7 @@ class Mission
 			};
 			id=7943;
 		};
-		class Item554
+		class Item553
 		{
 			dataType="Group";
 			side="West";
@@ -39176,7 +39265,7 @@ class Mission
 			};
 			id=7947;
 		};
-		class Item555
+		class Item554
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -39186,7 +39275,7 @@ class Mission
 			title="Como saber se está vivo ou morto / inteiro ou destruído";
 			id=7955;
 		};
-		class Item556
+		class Item555
 		{
 			dataType="Trigger";
 			position[]={5427.5708,5,3543.678};
@@ -39205,7 +39294,7 @@ class Mission
 			id=7956;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item557
+		class Item556
 		{
 			dataType="Trigger";
 			position[]={5427.2192,5,3554.843};
@@ -39225,7 +39314,7 @@ class Mission
 			id=7960;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item558
+		class Item557
 		{
 			dataType="Trigger";
 			position[]={5427.0239,5,3564.928};
@@ -39245,7 +39334,7 @@ class Mission
 			id=7962;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item559
+		class Item558
 		{
 			dataType="Trigger";
 			position[]={5426.3789,5,3575.394};
@@ -39265,7 +39354,7 @@ class Mission
 			id=7964;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item560
+		class Item559
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -39275,7 +39364,7 @@ class Mission
 			title="Como adicionar um briefing profissional em sua missão";
 			id=8215;
 		};
-		class Item561
+		class Item560
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -39285,7 +39374,7 @@ class Mission
 			title="EM BREVE";
 			id=8216;
 		};
-		class Item562
+		class Item561
 		{
 			dataType="Group";
 			side="West";
@@ -39412,7 +39501,7 @@ class Mission
 			};
 			id=147;
 		};
-		class Item563
+		class Item562
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -39423,7 +39512,7 @@ class Mission
 			description="Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2739692983";
 			id=8783;
 		};
-		class Item564
+		class Item563
 		{
 			dataType="Group";
 			side="West";
@@ -39547,7 +39636,7 @@ class Mission
 			};
 			id=8788;
 		};
-		class Item565
+		class Item564
 		{
 			dataType="Trigger";
 			position[]={2542.9399,5,2788.8799};
@@ -39565,7 +39654,7 @@ class Mission
 			id=8818;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item566
+		class Item565
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -39576,25 +39665,26 @@ class Mission
 			description="Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2740912514";
 			id=8820;
 		};
-		class Item567
+		class Item566
 		{
 			dataType="Trigger";
 			position[]={3678.324,5,1447.994};
 			angle=6.2808642;
 			class Attributes
 			{
-				onActivation="hint ""Se vc quer popular um mapa com civis, militares e veículos ou apenas um deles, que eles possam ficar andando para pontos pré-definidos mas de forma dinâmica, vc deveria conhecer o meu script 'Controlled Spawn and Waypoints Randomizr'.\n\nO link da Workshop está no detalhe do comentário (balãozinho verde) dessa instrução no EDEN."";";
+				onActivation="[""Se vc quer popular um mapa com civis, militares e veículos ou apenas um deles, que eles possam ficar andando para pontos pré-definidos mas de forma dinâmica, vc deveria conhecer o meu script 'Controlled Spawn and Waypoints Randomizr'.\n\nO link da Workshop está no detalhe do comentário (balãozinho verde) dessa instrução no EDEN.""] remoteExec [""hint""];";
 				sizeA=2;
 				sizeB=2;
 				sizeC=2;
 				repeatable=1;
 				activationBy="ANYPLAYER";
 				isRectangle=1;
+				triggerInterval=1;
 			};
 			id=8824;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item568
+		class Item567
 		{
 			dataType="Layer";
 			name="VEICULOS E ARMAS FIXAS";
@@ -43728,7 +43818,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6528.5879,6.6115026,1912.9323};
-						angles[]={-0,4.7314482,0};
+						angles[]={0,4.7314482,0};
 					};
 					side="Empty";
 					flags=4;
@@ -43764,13 +43854,13 @@ class Mission
 			};
 			id=8826;
 		};
-		class Item569
+		class Item568
 		{
 			dataType="Layer";
 			name="MAP ASSETS (IMPORTANTES)";
 			class Entities
 			{
-				items=40;
+				items=41;
 				class Item0
 				{
 					dataType="Object";
@@ -44151,7 +44241,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3397.3235,5,1829.3035};
+						position[]={3397.323,5,1829.303};
 						angles[]={0,1.513759,0};
 					};
 					side="Empty";
@@ -44351,7 +44441,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3515.1755,5.2680001,1980.8125};
+						position[]={3515.176,5.2680001,1980.813};
 					};
 					side="Empty";
 					flags=4;
@@ -44845,18 +44935,33 @@ class Mission
 					id=9138;
 					type="Land_HelipadCivil_F";
 				};
+				class Item40
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4161.7378,5,1817.6071};
+					};
+					side="Empty";
+					class Attributes
+					{
+						name="spawnVehicle10";
+					};
+					id=9461;
+					type="Land_HelipadEmpty_F";
+				};
 			};
 			id=8828;
-			atlOffset=3.0052204;
+			atlOffset=1.5026102;
 		};
-		class Item570
+		class Item569
 		{
 			dataType="Layer";
 			name="MAP ASSETS";
 			state=1;
 			class Entities
 			{
-				items=3289;
+				items=3317;
 				class Item0
 				{
 					dataType="Object";
@@ -55387,7 +55492,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6567.1777,5.8462019,1613.5892};
-						angles[]={0,0.031187726,-0};
+						angles[]={0,0.031187726,0};
 					};
 					side="Empty";
 					flags=5;
@@ -93481,7 +93586,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6565.8091,5.8462019,1708.8396};
-						angles[]={0,3.1384578,-0};
+						angles[]={0,3.1384578,0};
 					};
 					side="Empty";
 					flags=5;
@@ -97731,7 +97836,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6579.4097,6.1681576,1901.0254};
-						angles[]={-0,2.5602741,0};
+						angles[]={0,2.5602741,0};
 					};
 					side="Empty";
 					flags=4;
@@ -97867,7 +97972,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6572.3296,5.5753641,1917.7052};
-						angles[]={-0,4.6390672,0};
+						angles[]={0,4.6390672,0};
 					};
 					side="Empty";
 					flags=4;
@@ -97931,7 +98036,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6540.0464,5.5753641,1927.7828};
-						angles[]={-0,4.7443542,0};
+						angles[]={0,4.7443542,0};
 					};
 					side="Empty";
 					flags=4;
@@ -97941,10 +98046,499 @@ class Mission
 					id=9453;
 					type="Land_InfoStand_V1_F";
 				};
+				class Item3289
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4171.0898,5.8462019,1798.6683};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9462;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3290
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4163.6445,5.8462019,1798.6564};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9463;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3291
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4157.1182,5.8462019,1798.559};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9464;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3292
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4181.0039,5.8462019,1798.601};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9465;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3293
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.7695,5.8462019,1802.3514};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9466;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3294
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.8516,5.8462019,1809.869};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9467;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3295
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.8135,5.8462019,1817.2987};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9468;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3296
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.8184,5.8462019,1824.7391};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9469;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3297
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.7324,5.8462019,1832.2299};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9470;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3298
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4181.0215,5.8462019,1837.871};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9471;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3299
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4173.5361,5.8462019,1837.7538};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9472;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3300
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4166.125,5.8462019,1837.6432};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9473;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3301
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4158.6875,5.8462019,1837.4183};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9474;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3302
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4138.292,5.8462019,1801.7059};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9475;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3303
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4138.373,5.8462019,1809.2235};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9476;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3304
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4138.335,5.8462019,1816.6527};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9477;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3305
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4138.3398,5.8462019,1824.0931};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9478;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3306
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4138.2549,5.8462019,1831.5839};
+						angles[]={0,4.7101183,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9479;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3307
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4151.2012,5.8462019,1837.3002};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9480;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3308
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4143.7637,5.8462019,1837.0753};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9481;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3309
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4149.5479,5.8462019,1798.4574};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9482;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3310
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4142.1104,5.8462019,1798.2325};
+						angles[]={0,3.1177523,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9483;
+					type="Land_CncBarrierMedium4_F";
+				};
+				class Item3311
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4184.6494,5.8462019,1836.8861};
+						angles[]={0,4.7107286,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9484;
+					type="Land_CncBarrierMedium_F";
+				};
+				class Item3312
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4139.1768,5.8462019,1836.9396};
+						angles[]={0,3.1296825,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9485;
+					type="Land_CncBarrierMedium_F";
+				};
+				class Item3313
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4138.2178,5.8462019,1836.1239};
+						angles[]={0,4.7107286,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=9486;
+					type="Land_CncBarrierMedium_F";
+				};
+				class Item3314
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4175.9785,6.1681576,1798.6761};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=9487;
+					type="Land_CncShelter_F";
+				};
+				class Item3315
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4161.7485,5.5753641,1811.9691};
+						angles[]={-0,6.2791185,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=9488;
+					type="Land_InfoStand_V1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3316
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4161.9404,5.5753641,1828.2152};
+						angles[]={-0,6.2791185,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=9489;
+					type="Land_InfoStand_V1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			id=8827;
 		};
-		class Item571
+		class Item570
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -97954,7 +98548,7 @@ class Mission
 			title="Quando qualquer player passar na trigger com um tipo de veículo especifico";
 			id=8829;
 		};
-		class Item572
+		class Item571
 		{
 			dataType="Trigger";
 			position[]={6481.8999,5,1736.215};
@@ -97973,7 +98567,7 @@ class Mission
 			id=8846;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item573
+		class Item572
 		{
 			dataType="Trigger";
 			position[]={6569.7632,5,1733.96};
@@ -97992,7 +98586,7 @@ class Mission
 			id=8853;
 			type="EmptyDetector";
 		};
-		class Item574
+		class Item573
 		{
 			dataType="Trigger";
 			position[]={6564.73,5,1835.4536};
@@ -98010,7 +98604,7 @@ class Mission
 			id=8932;
 			type="EmptyDetector";
 		};
-		class Item575
+		class Item574
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -98020,7 +98614,7 @@ class Mission
 			title="Quando qualquer player passar na trigger com um tipo e modelo de veículo especifico";
 			id=8936;
 		};
-		class Item576
+		class Item575
 		{
 			dataType="Trigger";
 			position[]={6486.0039,5.8119998,1834.594};
@@ -98040,7 +98634,7 @@ class Mission
 			type="EmptyDetectorAreaR50";
 			atlOffset=0.8119998;
 		};
-		class Item577
+		class Item576
 		{
 			dataType="Trigger";
 			position[]={6307.2852,5,2014.736};
@@ -98054,7 +98648,7 @@ class Mission
 			id=8942;
 			type="EmptyDetector";
 		};
-		class Item578
+		class Item577
 		{
 			dataType="Group";
 			side="West";
@@ -98189,7 +98783,7 @@ class Mission
 			};
 			id=9005;
 		};
-		class Item579
+		class Item578
 		{
 			dataType="Trigger";
 			position[]={6316.0991,5,2018.579};
@@ -98208,7 +98802,7 @@ class Mission
 			id=9011;
 			type="EmptyDetector";
 		};
-		class Item580
+		class Item579
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -98218,7 +98812,7 @@ class Mission
 			title="Detectando que um veículo aéreo decolou";
 			id=9051;
 		};
-		class Item581
+		class Item580
 		{
 			dataType="Trigger";
 			position[]={6310.9839,5,2086.5879};
@@ -98234,7 +98828,7 @@ class Mission
 			id=9135;
 			type="EmptyDetector";
 		};
-		class Item582
+		class Item581
 		{
 			dataType="Trigger";
 			position[]={6308.9258,5,2086.1699};
@@ -98250,7 +98844,7 @@ class Mission
 			id=9136;
 			type="EmptyDetector";
 		};
-		class Item583
+		class Item582
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -98260,7 +98854,7 @@ class Mission
 			title="EM BREVE";
 			id=9139;
 		};
-		class Item584
+		class Item583
 		{
 			dataType="Trigger";
 			position[]={7580.123,5,2398.531};
@@ -98275,7 +98869,7 @@ class Mission
 			id=9141;
 			type="EmptyDetector";
 		};
-		class Item585
+		class Item584
 		{
 			dataType="Trigger";
 			position[]={5713.7036,5,4744.6099};
@@ -98294,7 +98888,7 @@ class Mission
 			id=9145;
 			type="EmptyDetector";
 		};
-		class Item586
+		class Item585
 		{
 			dataType="Trigger";
 			position[]={5726.2539,5,4744.5566};
@@ -98313,7 +98907,7 @@ class Mission
 			id=9148;
 			type="EmptyDetector";
 		};
-		class Item587
+		class Item586
 		{
 			dataType="Trigger";
 			position[]={5713.8901,5,4748.562};
@@ -98330,7 +98924,7 @@ class Mission
 			id=9149;
 			type="EmptyDetector";
 		};
-		class Item588
+		class Item587
 		{
 			dataType="Trigger";
 			position[]={5726.7549,5,4748.46};
@@ -98347,7 +98941,7 @@ class Mission
 			id=9154;
 			type="EmptyDetector";
 		};
-		class Item589
+		class Item588
 		{
 			dataType="Trigger";
 			position[]={3581.802,5,1656.322};
@@ -98363,7 +98957,7 @@ class Mission
 			id=9159;
 			type="EmptyDetector";
 		};
-		class Item590
+		class Item589
 		{
 			dataType="Marker";
 			position[]={5714.3311,5,4754.855};
@@ -98372,7 +98966,7 @@ class Mission
 			colorName="ColorRed";
 			id=9160;
 		};
-		class Item591
+		class Item590
 		{
 			dataType="Marker";
 			position[]={5727.1089,5,4754.541};
@@ -98381,7 +98975,7 @@ class Mission
 			colorName="ColorRed";
 			id=9161;
 		};
-		class Item592
+		class Item591
 		{
 			dataType="Marker";
 			position[]={5738.9409,5,4754.7998};
@@ -98390,7 +98984,7 @@ class Mission
 			colorName="ColorRed";
 			id=9174;
 		};
-		class Item593
+		class Item592
 		{
 			dataType="Trigger";
 			position[]={5738.0532,5,4744.6631};
@@ -98409,7 +99003,7 @@ class Mission
 			id=9180;
 			type="EmptyDetector";
 		};
-		class Item594
+		class Item593
 		{
 			dataType="Trigger";
 			position[]={5738.5542,5,4748.5659};
@@ -98426,7 +99020,7 @@ class Mission
 			id=9181;
 			type="EmptyDetector";
 		};
-		class Item595
+		class Item594
 		{
 			dataType="Marker";
 			position[]={5752.1152,5,4754.3989};
@@ -98435,7 +99029,7 @@ class Mission
 			colorName="ColorRed";
 			id=9191;
 		};
-		class Item596
+		class Item595
 		{
 			dataType="Group";
 			side="West";
@@ -98608,7 +99202,7 @@ class Mission
 			};
 			id=9193;
 		};
-		class Item597
+		class Item596
 		{
 			dataType="Group";
 			side="West";
@@ -98781,7 +99375,7 @@ class Mission
 			};
 			id=9195;
 		};
-		class Item598
+		class Item597
 		{
 			dataType="Group";
 			side="West";
@@ -98954,7 +99548,7 @@ class Mission
 			};
 			id=9197;
 		};
-		class Item599
+		class Item598
 		{
 			dataType="Trigger";
 			position[]={5751.2549,5,4744.2822};
@@ -98973,7 +99567,7 @@ class Mission
 			id=9214;
 			type="EmptyDetector";
 		};
-		class Item600
+		class Item599
 		{
 			dataType="Trigger";
 			position[]={5751.7559,5,4748.186};
@@ -98990,7 +99584,7 @@ class Mission
 			id=9215;
 			type="EmptyDetector";
 		};
-		class Item601
+		class Item600
 		{
 			dataType="Group";
 			side="West";
@@ -99163,7 +99757,7 @@ class Mission
 			};
 			id=9217;
 		};
-		class Item602
+		class Item601
 		{
 			dataType="Group";
 			side="West";
@@ -99405,7 +99999,7 @@ class Mission
 			};
 			id=9219;
 		};
-		class Item603
+		class Item602
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99467,7 +100061,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item604
+		class Item603
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -99477,7 +100071,7 @@ class Mission
 			title="Deletando objetos com nearestObjects (sofisticado)";
 			id=9276;
 		};
-		class Item605
+		class Item604
 		{
 			dataType="Trigger";
 			position[]={1871.575,5,4959.876};
@@ -99497,7 +100091,7 @@ class Mission
 			id=9306;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item606
+		class Item605
 		{
 			dataType="Trigger";
 			position[]={1871.797,5,4969.6821};
@@ -99517,7 +100111,7 @@ class Mission
 			id=9308;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item607
+		class Item606
 		{
 			dataType="Trigger";
 			position[]={1866.402,5,4952.7002};
@@ -99536,7 +100130,7 @@ class Mission
 			id=9318;
 			type="EmptyDetectorAreaR50";
 		};
-		class Item608
+		class Item607
 		{
 			dataType="Group";
 			side="West";
@@ -99793,7 +100387,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item609
+		class Item608
 		{
 			dataType="Trigger";
 			position[]={6540,5,1928.101};
@@ -99811,7 +100405,7 @@ class Mission
 			id=9420;
 			type="EmptyDetector";
 		};
-		class Item610
+		class Item609
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -99821,7 +100415,7 @@ class Mission
 			title="Quando um grupo específico passa na trigger, usando um veículo qualquer";
 			id=9421;
 		};
-		class Item611
+		class Item610
 		{
 			dataType="Trigger";
 			position[]={6487.3452,5.8119998,1927.915};
@@ -99839,7 +100433,7 @@ class Mission
 			type="EmptyDetectorAreaR50";
 			atlOffset=0.8119998;
 		};
-		class Item612
+		class Item611
 		{
 			dataType="Group";
 			side="West";
@@ -100101,6 +100695,56 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=9424;
+		};
+		class Item612
+		{
+			dataType="Trigger";
+			position[]={4161.8809,5,1812.182};
+			angle=1.5742172;
+			class Attributes
+			{
+				text="Esta trigger inicia a demonstração.";
+				onActivation="_pos = getPosATL spawnVehicle10;   " \n "aviao3 = createVehicle [""B_Plane_CAS_01_dynamicLoadout_F"", [_pos select 0, _pos select 1, _pos select 2], [], 120, ""FLY""];   " \n "createVehicleCrew aviao3;   " \n "group aviao3 deleteGroupWhenEmpty true;   " \n "leader group aviao3 move getPos spawnVehicle10;   " \n "[""Neste método de criar um objeto (aviao), estou dizendo para ele ir direto para um único destino (neste caso, envio ele direto para seu próprio ponto de spawn). Chegando lá, se fosse um carro, ele iria parar, mas como é um avião, ficará nas proximidades, sobrevoando.\n\nGEralmente quando uso este método, eu criou algum outro elemento e digo lá para o avião e a tripulação serem deletados quando estiverem XXX metros do ponto referencial.""] remoteExec [""hint""];";
+				sizeA=2.0039999;
+				sizeB=1.289;
+				sizeC=1.995;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+				triggerInterval=1;
+			};
+			id=9458;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item613
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4163.3452,5,1848.87};
+			};
+			title="Spawnando uma aeronave já em voo (com destino único)";
+			id=9459;
+		};
+		class Item614
+		{
+			dataType="Trigger";
+			position[]={4161.8989,5.0050001,1828.505};
+			angle=1.5742172;
+			class Attributes
+			{
+				text="trigger que deletará o avião e sua tripulação.";
+				condition="this && alive aviao3;";
+				onActivation="deleteVehicleCrew aviao3; " \n "deleteVehicle aviao3; " \n "[""Agora vc deletou a aeronave e sua tripulação. Certifique-se de, no código, vc deletar a tripulação primeiro que o veículo. Caso contrário, ao deletar o veículo primeiro, o Arma não sabe mais quem são seus tripulantes, mantendo-os no mapa.""] remoteExec [""hint""];";
+				sizeA=2.0039999;
+				sizeB=1.289;
+				sizeC=1.995;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+				triggerInterval=1;
+			};
+			id=9460;
+			type="EmptyDetectorAreaR50";
+			atlOffset=0.0050001144;
 		};
 	};
 	class Connections
