@@ -3,7 +3,7 @@
 
 Isto não é uma missão, mas sim um Framework ou Sandbox ou laboratório, se você preferir. Em outras palavras, "Para Novos Editores" é um pacote de instruções para acelerar o aprendizado de novos editores de missões no Arma 3. O foco aqui é instruir a como desenvolver soluções compatíveis com singleplayer e multiplayer, porém priorizando configurações para multijogadores em missões COOP.
 
-Aqui você encontrará:
+Aqui você encontrará através de exemplos funcionais:
 
 **SPAWNANDO VEÍCULOS E TRIPULAÇÕES**
 
