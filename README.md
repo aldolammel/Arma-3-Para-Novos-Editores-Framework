@@ -46,16 +46,15 @@ Aqui você encontrará:
 - Plantando e testando minas;
 - Como fazer campo minado dinâmico/automático/aleatório;
 
-**IDENTIFICANDO VEÍCULOS E TRIPULANTES**
+**DETECTANDO VEÍCULOS E TRIPULANTES**
 
-- Identificando: player específico dentro de qualquer veículo;
-- Identificando: qualquer um (players ou bots) com veículo específico;
-- 
-- 
-- 
-- 
-- 
-- 
+- Detectando qualquer um (player ou AI) com veículo específico na trigger;
+- Detectando qualquer player obrigatoriamente de veículo na trigger;
+- Detectando qualquer player com tipo de veículo específico na trigger;
+- Detectando qualquer player com tipo e modelo de veículo especifico na trigger;
+- Detectando player específico dentro de qualquer veículo na trigger;
+- Detectando player específico obrigatoriamente de veículo na trigger; 
+- Detectando grupo específico obrigatoriamente de veículo na trigger;
 
 **AÇÃO AO SE APROXIMAR**
 
@@ -88,6 +87,36 @@ Aqui você encontrará:
 - Fazendo prisioneiro sem o uso de algemas (Captive);
 - Resgatando refém (joinSilent);
 - Resgatando alguém e lhe dando armas e munição;
+
+**HELICÓPTEROS**
+
+- Detectando decolagem;
+- Deletando tripulação após o pouso;
+- Pegando e deixando carga/veículo (Cargo);
+- Iniciando missão em pleno voo e com carga rebocada (Cargo);
+- AI pousando com precisão;
+
+**COMUNICAÇÃO**
+
+- Comunicação por texto: HINT (para todo mundo);
+- Comunicação por texto: HINT (para Facção específica);
+- Comunicação por texto: HINT (para Grupo específico);
+- Comunicação por texto: HINT (para Player específico);
+- Comunicação por texto: systemChat (para todo mundo);
+- Comunicação por texto: systemChat (para Grupo específico);
+- Comunicação por texto: systemChat (para Player específico);
+- Comunicação por texto: sideChat (Base da facção específica falando);
+- Comunicação por texto: sideChat (Líder do grupo específico falando);
+- Comunicação por texto: sideChat (Alguém específico falando);
+- Comunicação por texto: commandChat (Base da facção específica falando);
+- Comunicação por texto: commandChat (Líder do grupo específico falando);
+- Comunicação por texto: commandChat (Alguém NÃO-líder falando);
+- Comunicação por texto: groupChat (Líder do grupo falando);
+- Comunicação por texto: groupChat (Alguém específico do grupo falando);
+- Comunicação por texto: vehicleChat (para veículo de Alguém específico);
+- Comunicação por texto: vehicleChat (para veículo do Líder do grupo específico);
+- Comunicação por texto: customChat;
+- Comunicação por texto: globalChat;
 
 dentre muitas outras coisas ainda não listadas acima...
 
