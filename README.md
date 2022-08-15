@@ -115,8 +115,22 @@ Aqui você encontrará através de exemplos funcionais:
 - Comunicação por texto: groupChat (Alguém específico do grupo falando);
 - Comunicação por texto: vehicleChat (para veículo de Alguém específico);
 - Comunicação por texto: vehicleChat (para veículo do Líder do grupo específico);
+- Comunicação por texto: globalChat (de qualquer um para todos);
 - Comunicação por texto: customChat;
-- Comunicação por texto: globalChat;
+- Comunicação por áudio: arquivo de áudio simulando Voz Local da AI (directSay);
+- Comunicação por áudio: arquivo de áudio simulando Voz Local da AI (com legenda);
+- Comunicação por áudio: arquivo de áudio simulando Voz da AI (globalRadio);
+
+**PERFUMARIA**
+
+- Forçando uma skin específica em players;
+- Soldado morto que não desaparecerá;
+- Animações corporais para AI;
+- Tornando coisas e pessoas invisíveis;
+- Forçando posições corporais (setUnitPos);
+- Forçar remoção de vegetação, construções e outros de uma área;
+- Imagens personalizadas nos dispositivos da missão;
+- Rádio (qualquer objeto) tocando áudio (música por exemplo);
 
 dentre muitas outras coisas ainda não listadas acima...
 
