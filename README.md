@@ -48,19 +48,46 @@ Aqui você encontrará:
 
 **IDENTIFICANDO VEÍCULOS E TRIPULANTES**
 
-- Como saber quando qualquer player obrigatoriamente de veículo passou na trigger;
-- Como saber quando player específico obrigatoriamente de veículo passou na trigger;
-- Como saber quando qualquer um (players ou bots) com veículo específico passou na trigger;
-- Como saber quando player específico está dentro de qualquer veículo;
-- Como saber quando um grupo específico está dentro da trigger, usando um veículo qualquer.
+- Identificando: player específico dentro de qualquer veículo;
+- Identificando: qualquer um (players ou bots) com veículo específico;
+- 
+- 
+- 
+- 
+- 
+- 
 
-**LIDANDO COM GRUPOS**
+**AÇÃO AO SE APROXIMAR**
 
-- Consegue executar a ação somente o membro específico do grupo;
-- Consegue executar a ação somente o líder do grupo específico;
-- Consegue executar a ação qualquer membro do grupo específico;
-- Consegue executar a ação qualquer membro de qualquer grupo da fação específica;
-- Consegue executar a ação se o grupo específico se aproximar do alvo ainda vivo;
+- Executa a ação ao se aproximar: somente um membro específico do grupo;
+- Executa a ação ao se aproximar: somente o líder do grupo específico;
+- Executa a ação ao se aproximar: qualquer membro do grupo específico (findIf);
+- Executa a ação ao se aproximar: qualquer membro de dois ou mais grupos específicos (findIf);
+- Executa a ação ao se aproximar: qualquer membro de qualquer grupo da facção específica (findIf);
+- Executa a ação ao se aproximar: qualquer jogador humano de qualquer grupo da facção específica (findIf);
+- Executa a ação ao se aproximar: qualquer membro de um grupo específico, desde que o objetivo ainda esteja vivo/não-destruído;
+- Um grupo uni-se a outro grupo, formando um grupo único;
+
+**VIVO OU MORTO, FUNCIONAL OU DESTRUÍDO**
+
+- Detectando se alguém específico está vivo ou morto;
+- Detectando se algo específico está funcional ou destruído;
+- Verificando se grupo 1 ou grupo 2 foram mortos;
+- Verificando se grupo 1 e grupo 2 foram mortos;
+- Verificando se 50% do grupo específico foram mortos;
+
+**REFÉM & PRISIONEIROS**
+
+- Se rendendo via Eden;
+- Se rendendo dinamicamente;
+- Verificando dinamicamente se unidade está ou não rendida;
+- Algemando in-game;
+- Algemando via Eden;
+- Algemando dinamicamente;
+- Verificando dinamicamente se unidade está ou não algemada;
+- Fazendo prisioneiro sem o uso de algemas (Captive);
+- Resgatando refém (joinSilent);
+- Resgatando alguém e lhe dando armas e munição;
 
 dentre muitas outras coisas ainda não listadas acima...
 
