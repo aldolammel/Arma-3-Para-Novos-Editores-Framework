@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6346.4512,193.56589,3813.0667};
-		dir[]={-0.071586646,-0.72744459,0.68259436};
-		up[]={-0.075886324,0.68595487,0.72356975};
-		aside[]={0.99462008,-2.0137122e-007,0.10431403};
+		pos[]={7385.2832,62.764374,1379.8696};
+		dir[]={0.0050766049,-0.64493722,0.76426351};
+		up[]={0.0042836927,0.76421773,0.64493698};
+		aside[]={1.000007,5.9818058e-007,-0.0066437311};
 	};
 };
 binarizationWanted=0;
@@ -38850,7 +38850,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="VEICULOS E ARMAS FIXAS";
-			state=1;
 			class Entities
 			{
 				items=74;
@@ -43025,7 +43024,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="MAP ASSETS (IMPORTANTES)";
-			state=1;
 			class Entities
 			{
 				items=41;
@@ -44126,6 +44124,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="MAP ASSETS";
+			state=1;
 			class Entities
 			{
 				items=3767;
