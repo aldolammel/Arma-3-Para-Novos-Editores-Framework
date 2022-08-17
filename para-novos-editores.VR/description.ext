@@ -14,7 +14,7 @@ class Header {
 	onLoadMission 		= "Este framework contém diversos exemplos para acelerar o aprendizado de novos editores. Sem nós, editores, o Arma não passa de um parquinho sem crianças brincando."; // descrição da missão.
 
 	// Gameplay
-	joinUnassigned 		= 0; 	// 0=jogador é automaticamente enviado pro time com menos players. / 1=jogador escolhe sua vaga na tela de Role Assignment antes da partida.
+	joinUnassigned 		= 1; 	// 0=jogador é automaticamente enviado pro time com menos players. / 1=jogador escolhe sua vaga na tela de Role Assignment antes da partida.
 	respawnOnStart		= 0;	// 1= para vc nascer em um dos pontos de respawn caso você tenha um / 0=vc nascerá onde está seu soldado no mapa.
 	respawn 			= 0; 	// 0=não respawna / 1=como um pássaro / 2=no lugar onde vc morreu / 3=na BASE.
 	respawnButton 		= 0;	// 0= desativar respawns na missão / 1=ativa botão que aparece quando vc usa o rewspawn pra nascer na BASE, por exemplo.
