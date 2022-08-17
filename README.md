@@ -65,7 +65,10 @@ Aqui você encontrará através de exemplos funcionais:
 - Executa a ação ao se aproximar: qualquer membro de qualquer grupo da facção específica (findIf);
 - Executa a ação ao se aproximar: qualquer jogador humano de qualquer grupo da facção específica (findIf);
 - Executa a ação ao se aproximar: qualquer membro de um grupo específico, desde que o objetivo ainda esteja vivo/não-destruído;
+- Executa a ação ao se aproximar: somente quando todos os membros vivos do grupo específico alcançam o objetivo;
 - Um grupo uni-se a outro grupo, formando um grupo único;
+- Grupo específico acolhe: outro grupo específico quando qualquer membro se aproximar;
+- Grupo específico acolhe: alguem específico quando qualquer membro se aproximar;
 
 **VIVO OU MORTO, FUNCIONAL OU DESTRUÍDO**
 
@@ -95,6 +98,8 @@ Aqui você encontrará através de exemplos funcionais:
 - Pegando e deixando carga/veículo (Cargo);
 - Iniciando missão em pleno voo e com carga rebocada (Cargo);
 - AI pousando com precisão;
+- Detectando se alguém do grupo específico desembarcou de qualquer veículo;
+- Detectando se alguém do grupo específico desembarcou do veículo específico;
 
 **COMUNICAÇÃO**
 
