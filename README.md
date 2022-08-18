@@ -108,6 +108,7 @@ Aqui você encontrará através de exemplos funcionais:
 - Comunicação por texto: HINT (para Grupo específico);
 - Comunicação por texto: HINT (para Player específico);
 - Comunicação por texto: systemChat (para todo mundo);
+- Comunicação por texto: systemChat (para Facção específico);
 - Comunicação por texto: systemChat (para Grupo específico);
 - Comunicação por texto: systemChat (para Player específico);
 - Comunicação por texto: sideChat (Base da facção específica falando);
