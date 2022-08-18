@@ -98,6 +98,7 @@ Aqui você encontrará através de exemplos funcionais:
 - Pegando e deixando carga/veículo (Cargo);
 - Iniciando missão em pleno voo e com carga rebocada (Cargo);
 - AI pousando com precisão;
+- Forçando players a usarem apenas assentos de passageiros;
 - Detectando se alguém do grupo específico desembarcou de qualquer veículo;
 - Detectando se alguém do grupo específico desembarcou do veículo específico;
 
