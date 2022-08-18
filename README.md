@@ -37,6 +37,7 @@ Aqui você encontrará através de exemplos funcionais:
 - Desativando apenas a visão termal dos carros de combate;
 - Forçando assinatura térmica em qualquer veículo mesmo desligado;
 - Removendo um tipo de munição de carros de combate;
+- Forçando players a ficarem como passageiros;
 - Veículo de bot em combate, forçar para gunner não desembarcar;
 - Veículo de bot em combate, forçar para ninguém desembarcar;
  
