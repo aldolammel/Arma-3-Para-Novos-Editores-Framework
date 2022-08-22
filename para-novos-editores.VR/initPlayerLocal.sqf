@@ -9,32 +9,7 @@
 // ao criar markers no Eden, utilize os prefixos para garantir que somente aquela facção verá as marcas: WEST-, EAST-, GUER-, CIV-
 // por enquanto só funciona com markers que já estão disponíveis no início da missão. Se as marcas das facções precisarem
 // aparecer durando a partida, trate-as como públicas infelizmente até eu adaptar o script abaixo.
-[] spawn
-{
-    while { true } do
-	{
-		waitUntil
-		{ 
-			sleep 1;
-			alive player;
-		};
-        {
-            _arr = _x splitString "-";
-            _pre = _arr select 0;
-			
-            if (_pre in ["WEST","EAST","GUER","CIV"]) then
-			{
-				if (format["%1",side player] == _pre) then
-				{
-					_x setMarkerAlphaLocal 1;
-                } else 
-				{
-                    _x setMarkerAlphaLocal 0;
-                };
-            };
-        } count allMapMarkers;
-    };
-};
+
 
 // MARCAS NO MAPA > T8 ZONAS DE SPAWN
 // estão no init.sqf.
